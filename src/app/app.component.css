@@ -1,0 +1,13 @@
+.bg-color {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(180deg, #1C1B1B 44.42%, #3A3A3A 100%);
+  z-index: 0;
+}
+
+.js-globe {
+  position: absolute;
+}

@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Uncut Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(),
+    url('assets/fonts/Uncut-Sans.otf');
+}
+
+body {
+  font-family: 'Uncut Sans';
+}

@@ -1,0 +1,102 @@
+:host, a {
+  color: white;
+  z-index: 1;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1011px;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  margin-bottom: 0;
+  list-style: none;
+  max-width: calc(100% - 330px);
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nav-btn {
+  display: none;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  flex: 0;
+  padding: 5px;
+  z-index: 10000;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: none;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.15s ease-in-out 0.3s;
+}
+
+.nav-btn .btn-bar {
+  position: relative;
+  width: 20px;
+  height: 2px;
+  border-radius: 5px;
+  background: white;
+}
+
+.nav-btn .btn-bar.menu-btn {
+  transition: transform 0.4s ease-in-out 0.2s, opacity 0.15s ease-in-out 0.2s;
+}
+
+.nav-btn .btn-bar.menu-btn:not(:first-child) {
+  margin-top: 6px;
+}
+
+.nav-btn .btn-bar.close-btn {
+  transform-origin: center center;
+  position: absolute;
+  margin-top: -1.5px;
+  opacity: 0;
+  top: 50%;
+  transition: transform 0.3s ease-in-out, opacity 0.05s ease-in-out 0.2s;
+}
+
+.nav-btn .btn-bar.close-btn:not(:last-child) {
+  transform: rotate(45deg) translateX(-250%);
+}
+
+.nav-btn .btn-bar.close-btn:last-child {
+  transform: rotate(-45deg) translateX(250%);
+}
+
+@media only screen and (max-width: 991px) {
+  .header-nav {
+    display: none;
+  }
+
+  .nav-btn {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
