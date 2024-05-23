@@ -8,6 +8,33 @@
   z-index: 0;
 }
 
+.absolute {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.globe-wrapper {
+  position: relative;
+  min-height: 724px;
+  overflow: hidden;
+  z-index: -1;
+}
+
 .js-globe {
   position: absolute;
+}
+
+.bg-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.bg-container.clip-path {
+  -webkit-clip-path: polygon(100% 0, 100% 89%, 50% 100%, 0 89%, 0 0);
+  clip-path: polygon(100% 0, 100% 89%, 50% 100%, 0 89%, 0 0);
 }
