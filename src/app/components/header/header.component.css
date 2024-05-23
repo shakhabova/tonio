@@ -2,6 +2,16 @@
   color: white;
   z-index: 1;
   position: relative;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 27px;
 }
 
 .container {
@@ -9,6 +19,7 @@
   justify-content: space-between;
   overflow: hidden;
   align-items: center;
+  margin-top: 54px;
 }
 
 .header-nav {
@@ -21,7 +32,7 @@
 
 .menu {
   display: flex;
-  margin-bottom: 0;
+  margin: 0;
   list-style: none;
   max-width: calc(100% - 330px);
   width: 100%;

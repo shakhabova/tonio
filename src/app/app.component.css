@@ -1,3 +1,8 @@
+:host {
+  padding: 0 104px;
+  display: block;
+}
+
 .bg-color {
   position: absolute;
   top: 0;
