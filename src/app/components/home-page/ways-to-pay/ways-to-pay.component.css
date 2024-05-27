@@ -1,0 +1,96 @@
+:host {
+  display: block;
+  background-color: #EFEFEF;
+  margin-top: 64px;
+  padding: 64px;
+}
+
+
+
+
+.title  {
+margin : 0 auto;
+margin-bottom: 55px;
+  width: 646px;
+  color: #1C1C1C;
+  text-align: center;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.card-block-title {
+  width: 397px;
+  margin: 0 auto;
+  margin-top: 64px;
+  color: #1c1c1c;
+  text-align: center;
+  font-family: "Uncut Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; /* 120% */
+}
+
+.card-block {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  position: relative;
+  height: 416px;
+  width: 389px;
+}
+
+.card-header {
+  display: flex;
+}
+
+.card-header img {
+  width: 389px;
+  border-radius: 16px;
+}
+
+.card-body {
+  width: 389px;
+  height: 167px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 16px 16px;
+
+  backdrop-filter: blur(10px);
+  padding: 24px;
+}
+
+.card-title {
+  color: #1C1C1C;
+
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin: 0;
+}
+
+.card-subtitle {
+  color: #606060;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 27px; /* 150% */
+}
+
+.label{
+  color: #FFF;
+    font-size: 13px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 600;
+    padding: 3px 10px;
+    line-height: 21px;
+    border-radius: 34px;
+    background: #E54A4A;
+}

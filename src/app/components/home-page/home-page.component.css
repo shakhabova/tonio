@@ -52,6 +52,12 @@ box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px
   text-decoration: none;
 }
 
+.tabs-wrapper {
+  padding: 0 104px;
+  display: flex;
+    flex-direction: column;
+}
+
 .tabs {
   background-color: #FFF;
   align-self: flex-start;

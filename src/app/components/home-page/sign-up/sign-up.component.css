@@ -1,0 +1,39 @@
+:host {
+  background: linear-gradient(86deg, #1C1B1B 50.39%, #FDCC06 111.1%);
+  color:#fff;
+}
+
+.signup-info-block {
+  display: flex;
+  gap: 37px;
+}
+
+.signup-info-left-block {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  flex-grow: 1;
+  margin-left: 110px;
+}
+.signup-info-card {
+  display: flex;
+  gap: 26px;
+}
+
+.signup-info-card img{
+width: 55px;
+height: 58px;
+padding: 6px;
+background-color: #fff;
+border-radius: 12px;
+
+}
+
+.signup-info-right-block {
+  width: 850px;
+  
+}
+
+.signup-info-right-block img {
+  width: 850px;
+}

@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ReceiveCardsBlockComponent } from './receive-cards-block/receive-cards-block.component';
+import { WaysToPayComponent } from './ways-to-pay/ways-to-pay.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 type Tabs = 'send-money' | 'receive-money';
 
@@ -10,6 +12,8 @@ type Tabs = 'send-money' | 'receive-money';
   imports: [
     CommonModule,
     ReceiveCardsBlockComponent,
+    WaysToPayComponent,
+    SignUpComponent
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
