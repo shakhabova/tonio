@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ReceiveCardsBlockComponent } from './receive-cards-block/receive-cards-block.component';
 
 type Tabs = 'send-money' | 'receive-money';
 
@@ -8,6 +9,7 @@ type Tabs = 'send-money' | 'receive-money';
   standalone: true,
   imports: [
     CommonModule,
+    ReceiveCardsBlockComponent,
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
