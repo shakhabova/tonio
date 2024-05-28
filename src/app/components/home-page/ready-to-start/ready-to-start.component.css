@@ -1,0 +1,38 @@
+:host {
+  padding-top: 90px;
+}
+
+.get-started-block {
+  background: #fdcc06;
+  border-radius: 16px;
+  max-width: 675px;
+  width: 100%;
+  padding: 40px 20px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button {
+  display: inline-flex;
+  color: #fdcc06;
+  padding: 10px 24px 11px 24px;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 8px;
+  background: #1c1c1c;
+  text-decoration: none;
+}
+.get-started-title{
+  font-family: "uncutBold";
+  font-size: 26px;
+  line-height: 31px;
+  margin-bottom: 24px;
+  text-align: center;
+  font-weight: 700;
+  
+}
+

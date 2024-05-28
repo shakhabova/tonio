@@ -4,6 +4,7 @@ import { ReceiveCardsBlockComponent } from './receive-cards-block/receive-cards-
 import { WaysToPayComponent } from './ways-to-pay/ways-to-pay.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { WhyMyguavaComponent } from './why-myguava/why-myguava.component';
+import { ReadyToStartComponent } from './ready-to-start/ready-to-start.component';
 
 type Tabs = 'send-money' | 'receive-money';
 
@@ -15,7 +16,8 @@ type Tabs = 'send-money' | 'receive-money';
     ReceiveCardsBlockComponent,
     WaysToPayComponent,
     SignUpComponent,
-    WhyMyguavaComponent
+    WhyMyguavaComponent,
+    ReadyToStartComponent
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
