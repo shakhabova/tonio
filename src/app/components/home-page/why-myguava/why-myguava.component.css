@@ -1,0 +1,87 @@
+:host {
+  background: #f2f4f9;
+    padding-bottom: 0;
+   
+   
+}
+
+.container {
+  padding: 0 180px;
+}
+
+
+.card img {
+  width: 112px;
+  height: 112px;
+}
+
+.card-block {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 35px;
+}
+
+.card {
+    padding: 0;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 111px;
+    gap: 20px;
+    
+}
+
+.card-body {
+  position: relative;
+}
+
+ .card span {
+  background: linear-gradient(198deg, #1C1C1C -30.81%, #FDCC06 133.54%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  padding-right: 10px;
+  font-family: Caveat;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 39px; 
+  position: absolute;
+  top: -40px;
+  right: 0;
+}
+
+.title {
+  color: #1C1C1C;
+text-align: center;
+font-family: "Uncut Sans";
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 48px; /* 120% */
+}
+.card-title {
+  font-family: "Uncut Sans";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+
+.card-subtitle {
+  color: #606060;
+font-family: "Uncut Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-top: 13px;
+margin-bottom: 0;
+}

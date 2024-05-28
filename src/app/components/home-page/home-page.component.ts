@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { ReceiveCardsBlockComponent } from './receive-cards-block/receive-cards-block.component';
 import { WaysToPayComponent } from './ways-to-pay/ways-to-pay.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { WhyMyguavaComponent } from './why-myguava/why-myguava.component';
 
 type Tabs = 'send-money' | 'receive-money';
 
@@ -13,7 +14,8 @@ type Tabs = 'send-money' | 'receive-money';
     CommonModule,
     ReceiveCardsBlockComponent,
     WaysToPayComponent,
-    SignUpComponent
+    SignUpComponent,
+    WhyMyguavaComponent
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css'
