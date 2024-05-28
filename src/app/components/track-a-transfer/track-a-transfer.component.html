@@ -1,0 +1,35 @@
+<div class="container">
+  <h2 class="title">Track a transfer</h2>
+  <p class="subtitle">
+    Check the status of your transaction by entering<br> the authorization number or
+    transfer ID
+  </p>
+</div>
+<section id="check-status">
+  <div class="container">
+    <form>
+      <div class="check-status-block">
+        <label>Transfer number</label>
+        <div class="check-status-input">
+          <input
+            type="text"
+            placeholder="Please enter transfer number"
+            id="check-status-code"
+          />
+          <button class="button">Check status</button>
+          <p class="error-text">
+            The inserted transfer number is wrong, please insert the correct
+            one.
+          </p>
+        </div>
+      </div>
+      <div class="payment-status-block" id="payment-status-block">
+        <p class="payment-status-title">Payment status is:</p>
+        <div class="check-after default">
+          <p>Displayed after status cheking</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+<app-ready-to-start></app-ready-to-start>
