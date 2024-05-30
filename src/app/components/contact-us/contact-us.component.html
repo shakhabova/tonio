@@ -1,0 +1,39 @@
+<div class="container">
+  <h1 class="title">Contact us and get answers to your questions</h1>
+</div>
+<section id="contact-form">
+  <div class="container">
+    <form method="post" action="/main/form/contact">
+      <div class="contact-form">
+        <div class="contact-form-control">
+          <label>How to address you? </label>
+          <input
+            type="text"
+            name="name"
+            value=""
+            placeholder="Name &amp; Surname"
+          />
+        </div>
+        <div class="contact-form-control">
+          <label>Email</label>
+          <input type="email" name="email" value="" placeholder="Email" />
+        </div>
+        <div class="contact-form-control">
+          <label>Contact number</label>
+          <input type="number" name="phone" value="" placeholder="Enter phone number" id="telephone2" autocomplete="off" style="padding-left: 90px;">
+         </div>
+        <div class="contact-form-control contact-textarea">
+          <label>Message</label>
+          <textarea
+            name="message"
+            placeholder="Share your ideas and opinion"
+          ></textarea>
+        </div>
+
+        <div class="contact-form-control btn-block">
+          <button class="button purple-btn">Send message</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,60 @@
+.title {
+  color: #f8f5ff;
+  text-align: center;
+  font-family: "Uncut Sans";
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  margin-bottom: 24px;
+}
+
+#contact-form{
+  max-width: 848px;
+  height: 540px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 41px 45px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  padding-top: 0;
+
+  position: relative;
+  z-index: 1;
+}
+
+ label {
+  font-family: "uncutSemiBold";
+  font-size: 16px;
+  line-height: 24px;
+  color: #1C1C1C;
+  margin-bottom: 7px;
+}
+
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+.button purple-btn {
+  background-color: #ffc107;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
