@@ -195,6 +195,7 @@ box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px
   gap: 32px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 .custom-card {
@@ -211,6 +212,27 @@ box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px
 
 .custom-card-header img {
   width: inherit;
+}
+
+.custom-card-body {
+  margin-top: 16px;
+}
+
+.custom-card-title {
+  color: #1C1C1C;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 4px;
+  line-height: 33px; /* 150% */
+}
+
+.custom-card-subtitle {
+  color: #606060;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px; /* 150% */
 }
 
 .custom-card-icon {
@@ -248,7 +270,9 @@ box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px
     padding: 1.25rem;
 }
 
-
+app-receive-cards-block {
+  margin-top: 80px;
+}
 
 @media only screen and (max-width: 1200px) {
   .control-wrapper {
@@ -262,7 +286,7 @@ box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px
   }
 }
 
-@media only screen and (max-width: 1399px) {
+@media only screen and (max-width: 1099px) {
   .custom-card-block {
     align-items: center;
     flex-direction: column;

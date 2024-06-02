@@ -1,7 +1,8 @@
 .title-block {
   display: flex;
-    justify-content: center;
-    align-items: flex-end;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 50px;
 }
 
 .title-block h2 {
@@ -119,4 +120,14 @@ line-height: 27px; /* 150% */
 .custom-card:hover .custom-card-img-overlay {
   opacity: 1;
   visibility: visible;
+}
+
+@media only screen and (max-width: 992px) {
+  .title-arrow-1, .title-arrow-2 {
+    display: none;
+  }
+
+  .title-block {
+    margin-bottom: 0;
+  }
 }
