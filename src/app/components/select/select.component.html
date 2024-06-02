@@ -1,0 +1,26 @@
+<ng-select
+  [items]="items()"
+  (change)="select.emit($event)"
+  [ngModel]="selected()"
+  bindLabel="label"
+  bindValue="value"
+  [clearable]="false"
+  [searchable]="false"
+>
+  <ng-template ng-label-tmp let-item="item">
+    <div class="select-item">
+      @if (item.icon) {
+        <img [src]="item.icon"  />
+      }
+      {{ item.label }}
+    </div>
+  </ng-template>
+  <ng-template ng-option-tmp let-item="item">
+    <div class="select-item">
+      @if (item.icon) {
+        <img [src]="item.icon"  />
+      }
+      {{ item.label }}
+    </div>
+  </ng-template>
+</ng-select>

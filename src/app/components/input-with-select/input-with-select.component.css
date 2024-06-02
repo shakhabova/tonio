@@ -1,0 +1,55 @@
+.input-wrapper {
+  display: flex;
+  align-items: stretch;
+
+  border-radius: 10px;
+  border: 1px solid #E4E8F0;
+  background: #F4F6F9;
+
+  height: 56px;
+}
+
+input {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid #E4E8F0;
+
+  background: #F4F6F9;
+  flex-grow: 1;
+  height: 56px;
+  border-right: none;
+  outline: none;
+}
+
+ng-select {
+  width: 100px;
+  
+}
+
+:host ::ng-deep .ng-select .ng-select-container {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: none;
+}
+
+:host ::ng-deep .ng-select.ng-select-focused:not(.ng-select-opened) > .ng-select-container {
+  box-shadow: none !important;
+  border-color: #E4E8F0 !important;
+}
+
+.select-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #1C1C1C;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 27px */
+}
+
+.select-item img {
+  width: 18px;
+  height: 18px;
+}

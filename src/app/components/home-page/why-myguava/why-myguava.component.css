@@ -7,19 +7,19 @@
   padding: 0 180px;
 }
 
-.card img {
+.custom-card img {
   width: 112px;
   height: 112px;
 }
 
-.card-block {
+.custom-card-block {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 35px;
 }
 
-.card {
+.custom-card {
   padding: 0;
   border: none;
   display: flex;
@@ -30,11 +30,11 @@
   gap: 20px;
 }
 
-.card-body {
+.custom-card-body {
   position: relative;
 }
 
-.card span {
+.custom-card span {
   background: linear-gradient(198deg, #1c1c1c -30.81%, #fdcc06 133.54%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -61,7 +61,7 @@
   font-weight: 700;
   line-height: 48px; /* 120% */
 }
-.card-title {
+.custom-card-title {
   font-family: "Uncut Sans";
   font-size: 28px;
   font-style: normal;
@@ -70,7 +70,7 @@
   margin: 0;
 }
 
-.card-subtitle {
+.custom-card-subtitle {
   color: #606060;
   font-family: "Uncut Sans";
   font-size: 20px;

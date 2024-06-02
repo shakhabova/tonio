@@ -1,29 +1,64 @@
-:host, a {
+:host {
   color: white;
   z-index: 1;
   position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.accordion {
+  --bs-accordion-bg: transparent;
+  --bs-accordion-btn-color: white;
+  --bs-accordion-btn-focus-box-shadow: unset;
+  --bs-accordion-active-color: white;
+  --bs-accordion-border-width: 0;
+  --bs-accordion-btn-icon-width: 16px;
+}
+
+.accordion-header {
+  display: inline-block;
+}
+
+.accordion-button {
+  background-color: transparent;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.accordion-button::after {
+  background-image: url('/assets/icons/arrow.svg');
+  margin-left: 15px;
+  background-position: center;
+}
+
+a {
+  color: white;
   text-decoration: none;
 }
 
 header {
-  padding: 0 104px;
+  flex-grow: 1;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  z-index: 1000;
 }
 
 .logo img {
   height: 27px;
 }
 
-.container {
+.wrapper {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
   align-items: center;
   margin-top: 54px;
+  padding: 0 104px;
 }
 
 .header-nav {
@@ -36,11 +71,19 @@ header {
 
 .menu {
   display: flex;
-  margin: 0;
+  margin: 0 auto;
   list-style: none;
-  max-width: calc(100% - 330px);
-  width: 100%;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 48px;
+}
+
+ul {
+  list-style: none;
+}
+
+.login-btn {
+  color: #1c1c1c;
+  margin-left: 15px;
 }
 
 .nav-btn {
@@ -67,6 +110,31 @@ header {
   opacity: 0;
   visibility: hidden;
   transition: all 0.15s ease-in-out 0.3s;
+  background: linear-gradient(180deg, #1C1B1B 44.42%, #3A3A3A 100%);
+}
+
+.mobile-menu-container {
+  margin-top: 111px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 111px);
+}
+
+.sub-mobile-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.sub-mobile-menu li {
+  padding: 7px 0;
+}
+
+.sub-mobile-menu li a {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 21.6px */
 }
 
 .nav-btn .btn-bar {
@@ -102,7 +170,107 @@ header {
   transform: rotate(-45deg) translateX(250%);
 }
 
-@media only screen and (max-width: 991px) {
+.icons-menu-block {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-left: 16px;
+  align-items: flex-start;
+  margin-bottom: 56px;
+}
+
+.mobile-menu-icon-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mobile-menu-icon {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.mobile-menu-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.mobile-login-btn {
+  color: #1C1C1C;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.social-links {
+  margin-left: 16px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+}
+
+header.open .mobile-menu {
+  transition: all 0.15s ease-in-out 0.15s;
+  opacity: 1;
+  visibility: visible;
+}
+header.open .mobile-menu-container {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s ease-in-out 0.8s;
+}
+header.open .nav-btn .btn-bar.menu-btn {
+  opacity: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.15s ease-in-out 0.15s;
+}
+header.open .nav-btn .btn-bar.menu-btn:nth-child(odd) {
+  transform: translateX(-400%);
+}
+header.open .nav-btn .btn-bar.menu-btn:nth-child(even) {
+  transform: translateX(200%);
+}
+header.open .nav-btn .btn-bar.close-btn {
+  opacity: 1;
+  transition: transform 0.3s ease-in-out 0.3s, opacity 0.05s ease-in-out 0.3s;
+}
+header.open .nav-btn .btn-bar.close-btn:not(:last-child) {
+  transform: rotate(45deg) translateX(0%);
+}
+header.open .nav-btn .btn-bar.close-btn:last-child {
+  transform: rotate(-45deg) translateX(0%);
+}
+header.open .mobile-menu .background .portion {
+  transition: all 0.4s ease-in-out 0.3s;
+}
+header.open .mobile-menu .background .portion:first-child {
+  top: 0;
+  left: 0%;
+  width: 100%;
+}
+header.open .mobile-menu .background .portion:nth-child(2) {
+  top: 50%;
+  left: 0%;
+  width: 100%;
+}
+header.open .mobile-menu .background .portion:last-child {
+  top: auto;
+  left: 0%;
+  bottom: 0;
+  width: 100%;
+}
+::ng-deep body:has(header.open) {
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1180px) {
   .header-nav {
     display: none;
   }
@@ -113,5 +281,14 @@ header {
 
   .mobile-menu {
     display: block;
+  }
+
+  .login-btn {
+    display: none;
+  }
+
+  .wrapper {
+    margin-top: 35px;
+    padding: 0 15px;
   }
 }

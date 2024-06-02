@@ -1,88 +1,178 @@
-<header class="">
-  <div class="container">
-      <a href="/" class="logo"><img src="assets/images/logo.png " alt="MyGuava Transfers logo"></a>
-      <nav class="header-nav">
-          <ul class="menu">
-              <li><a routerLink="/track-transfer" routerLinkActive="router-link-active"  class="">Track a transfer</a></li>
-              <li><a href="/main/location" class="">Find  a Location</a></li>
-              <li><a href="/main/help" class="">Help</a></li>
-              <li><a routerLink="/contact-us" routerLinkActive="router-link-active" class="">Contact us</a></li>
-              <li><a href="/main/about" class="">About</a></li>
-          </ul>
-          <div class="header-btns">
-              <a href="https://account.remiton.global/auth/login?redirect=home" target="_blank" class="button">Sign in/Sign up</a>
-          </div>
-      </nav>
-      <div class="nav-btn">
-          <div class="btn-bar menu-btn"></div>
-          <div class="btn-bar menu-btn"></div>
-          <div class="btn-bar menu-btn"></div>
-          <div class="btn-bar close-btn"></div>
-          <div class="btn-bar close-btn"></div>
-      </div>
+<header [class.open]="mobileMenuOpened()">
+  <div class="wrapper">
+    <a href="/" class="logo"
+      ><img src="assets/images/logo.png " alt="MyGuava Transfers logo"
+    /></a>
+    <nav class="header-nav">
+      <ul class="menu">
+        <li>
+          <a
+            routerLink="/track-transfer"
+            routerLinkActive="router-link-active"
+            class=""
+            >Track a transfer</a
+          >
+        </li>
+        <li><a href="/main/location" class="">Find a Location</a></li>
+        <li><a href="/main/help" class="">Help</a></li>
+        <li>
+          <a
+            routerLink="/contact-us"
+            routerLinkActive="router-link-active"
+            class=""
+            >Contact us</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/about-us"
+            routerLinkActive="router-link-active"
+            class=""
+            >About Us</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <a
+      href="https://account.remiton.global/auth/login?redirect=home"
+      target="_blank"
+      class="button login-btn"
+      >Sign in/Sign up</a
+    >
+    <div class="nav-btn" (click)="mobileMenuOpened.set(!mobileMenuOpened())">
+      <div class="btn-bar menu-btn"></div>
+      <div class="btn-bar menu-btn"></div>
+      <div class="btn-bar menu-btn"></div>
+      <div class="btn-bar close-btn"></div>
+      <div class="btn-bar close-btn"></div>
+    </div>
   </div>
   <!-- Mobile menu Start -->
   <div class="mobile-menu">
-      <div class="background">
-          <div class="portion"></div>
-          <div class="portion"></div>
-          <div class="portion"></div>
-      </div>
-      <div class="mobile-menu-container">
-          <ul class="mobile-menu-list">
-              <li class="mobile-menu-dropdown">
-                  Help <img src="/public/images/icon/arrow.svg" alt="arrow">
-                  <ul class="sub-mobile-menu">
+    <div class="mobile-menu-container">
+        <div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    Help
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="sub-mobile-menu">
                       <li><a href="/main/help">Help Center</a></li>
                       <li><a href="/main/faq">FAQ</a></li>
                       <li><a href="/main/cash">Cash pickup</a></li>
                       <li><a href="/main/btransfer">Bank transfer</a></li>
                       <li><a href="/main/card">Credit/Debit card</a></li>
-                  </ul>
-              </li>
-
-              <li class="mobile-menu-dropdown">
-                  Company <img src="/public/images/icon/arrow.svg" alt="arrow">
-                  <ul class="sub-mobile-menu">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Company
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="sub-mobile-menu">
                       <li><a href="/main/about">About</a></li>
                       <li><a href="/main/contact">Contact us</a></li>
                       <li><a href="/blog">News/Blog</a></li>
-                  </ul>
-              </li>
-
-              <li class="mobile-menu-dropdown">
-                  Legal <img src="/public/images/icon/arrow.svg" alt="arrow">
-                  <ul class="sub-mobile-menu">
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    Legal
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="sub-mobile-menu">
                       <li><a href="/main/terms">Terms of Service</a></li>
                       <li><a href="/main/privacy">Privacy policy</a></li>
                       <li><a href="/main/cookies">Cookies policy</a></li>
-                  </ul>
-              </li>
-          </ul>
-          <div class="mobile-menu-block">
-              <a href="/main/transfer" class="mobile-menu-icon-link">
-                      <span class="mobile-menu-icon">
-                          <img src="/public/images/icon/search.svg" alt="search">
-                      </span>
-                  <span class="mobile-menu-icon-text">Track a transfer</span>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="mobile-menu-block icons-menu-block">
+              <a routerLink="/track-transfer" class="mobile-menu-icon-link">
+                <span class="mobile-menu-icon">
+                  <img src="assets/icons/track-icon.png" alt="search" />
+                </span>
+                <span class="mobile-menu-icon-text">Track a transfer</span>
               </a>
               <a href="/main/location" class="mobile-menu-icon-link">
-                  <div class="mobile-menu-icon">
-                      <img src="/public/images/icon/map-pin.svg" alt="map pin">
-                  </div>
-                  <span class="mobile-menu-icon-text">Find location</span>
+                <div class="mobile-menu-icon">
+                  <img src="assets/icons/find-icon.png" alt="map pin" />
+                </div>
+                <span class="mobile-menu-icon-text">Find location</span>
               </a>
-          </div>
-          <div class="mobile-menu-btns">
-              <a href="https://account.remiton.global/auth/login?redirect=home" target="_blank" class="button">Sign in/Sign up</a>
-          </div>
-          <div class="social-links">
-              <a href="" target="_blank"><img src="/public/images/icon/facebook.svg" alt="facebook"></a>
-              <a href="" target="_blank"><img src="/public/images/icon/instagram.svg" alt="instagram"></a>
-              <a href="" target="_blank"><img src="/public/images/icon/twitter.svg" alt="twitter"></a>
-              <a href="" target="_blank"><img src="/public/images/icon/linkedin.svg" alt="linkedin"></a>
-          </div>
+            </div>
+            <a
+              href="https://account.remiton.global/auth/login?redirect=home"
+              target="_blank"
+              class="button mobile-login-btn"
+              >Sign in/Sign up</a
+            >
+        </div>
+      <div class="social-links">
+        <a href="" target="_blank"
+          ><img src="assets/icons/Facebook.svg" alt="facebook"
+        /></a>
+        <a href="" target="_blank"
+          ><img src="assets/icons/Instagram.svg" alt="instagram"
+        /></a>
+        <a href="" target="_blank"
+          ><img src="assets/icons/Twitter.svg" alt="twitter"
+        /></a>
+        <a href="" target="_blank"
+          ><img src="assets/icons/LinkedIn.svg" alt="linkedin"
+        /></a>
       </div>
+    </div>
   </div>
   <!-- Mobile menu end -->
 </header>

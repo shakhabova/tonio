@@ -20,7 +20,7 @@ margin-bottom: 55px;
   line-height: 48px;
 }
 
-.card-block-title {
+.custom-card-block-title {
   width: 397px;
   margin: 0 auto;
   margin-top: 64px;
@@ -33,29 +33,29 @@ margin-bottom: 55px;
   line-height: 48px; /* 120% */
 }
 
-.card-block {
+.custom-card-block {
   display: flex;
   gap: 32px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.card {
+.custom-card {
   position: relative;
   height: 416px;
   width: 389px;
 }
 
-.card-header {
+.custom-card-header {
   display: flex;
 }
 
-.card-header img {
+.custom-card-header img {
   width: 389px;
   border-radius: 16px;
 }
 
-.card-body {
+.custom-card-body {
   width: 389px;
   height: 167px;
   flex-shrink: 0;
@@ -65,7 +65,7 @@ margin-bottom: 55px;
   padding: 24px;
 }
 
-.card-title {
+.custom-card-title {
   color: #1C1C1C;
 
 font-size: 22px;
@@ -75,7 +75,7 @@ line-height: normal;
 margin: 0;
 }
 
-.card-subtitle {
+.custom-card-subtitle {
   color: #606060;
 font-size: 18px;
 font-style: normal;

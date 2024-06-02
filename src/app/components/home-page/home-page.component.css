@@ -43,7 +43,7 @@
   border-radius: 8px;
 background: #FDCC06;
 
-/* card shadow */
+/* custom-card shadow */
 box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px rgba(101, 101, 101, 0.04);
   cursor: pointer;
 }
@@ -111,6 +111,26 @@ box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px
   gap: 7px;
 }
 
+.control-wrapper label {
+  color: #1C1C1C;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #E4E8F0;
+  background: #F4F6F9;
+
+  color: #1C1C1C;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+
 .current-info-wrapper{
   display: flex;
   align-items: center;
@@ -150,14 +170,14 @@ box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px
   border-radius: 8px;
 background: #FDCC06;
 
-/* card shadow */
+/* custom-card shadow */
 box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px rgba(101, 101, 101, 0.04);
   cursor: pointer;
   text-decoration: none;
 
 }
 
-.card-block-title {
+.custom-card-block-title {
   width: 397px;
   margin: 0 auto;
   margin-top: 64px;
@@ -170,18 +190,18 @@ box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px
   line-height: 48px; /* 120% */
 }
 
-.card-block {
+.custom-card-block {
   display: flex;
   gap: 32px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.card {
+.custom-card {
   position: relative;
 }
 
-.card-header {
+.custom-card-header {
   width: 519px;
   height: 380px;
   border-radius: 16px;
@@ -189,11 +209,11 @@ box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px
   padding: 26px;
 }
 
-.card-header img {
+.custom-card-header img {
   width: inherit;
 }
 
-.card-icon {
+.custom-card-icon {
   position: absolute;
   left: calc(50% - 20px);
   top: -20px;
@@ -207,7 +227,7 @@ box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px
 
 }
 
-.card-img-overlay {
+.custom-card-img-overlay {
   background: rgba(255, 255, 255, 0.9);
     border-width: 0px 1px 1px 1px;
     border-style: solid;
@@ -243,7 +263,7 @@ box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px
 }
 
 @media only screen and (max-width: 1399px) {
-  .card-block {
+  .custom-card-block {
     align-items: center;
     flex-direction: column;
   }
