@@ -211,7 +211,7 @@ box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px
 }
 
 .custom-card-header img {
-  width: inherit;
+  width: 100%;
 }
 
 .custom-card-body {
