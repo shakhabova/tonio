@@ -84,3 +84,7 @@
   line-height: 165%;
   margin-top: 24px;
 }
+
+.map {
+  display: none;
+}

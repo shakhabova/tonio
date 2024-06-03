@@ -19,5 +19,14 @@ export class FindLocationComponent {
         { value: 'BGD', label: 'Bangladesh' },
     ];
 
-    countryItems = this.countries.map(c => ({ ...c, icon: `https://s3-api.guavapay.com/public-icons/countries/1x1/${c.value.toLowerCase()}.svg` }))
+    countryItems = this.countries.map(c => ({ ...c, icon: `https://s3-api.guavapay.com/public-icons/countries/1x1/${c.value.toLowerCase()}.svg` }));
+
+    onCountrySelect(country: SelectItem): void {
+        const index = this.countries.findIndex(c => c.value === country.value);
+        const nodes = document.querySelectorAll<HTMLDivElement>('.map');
+        if (nodes) {
+            nodes.forEach(node => node.style.display = 'none');
+            nodes[index].style.display = 'block';
+        }
+    }
 }
