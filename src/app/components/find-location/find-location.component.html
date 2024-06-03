@@ -1,0 +1,27 @@
+<div class="title-wrapper">
+  <h2 class="title">Find a location</h2>
+  <p class="subtitle">Find an agent point nearby to remit
+      or pick-up your transfer</p>
+</div>
+
+<div class="search-location-block">
+  <div class="search-location-block-title">Country</div>
+  <div class="search-location-select">
+    <app-select [items]="countryItems" [selected]="countryItems[0].value"></app-select>
+      <!-- <div class="search-location-select-list">
+          <p class="search-location-active-element"><img src="/public/images/flag/egypt.svg"> <span>Egypt</span></p>
+          <ul class="search-location-list">
+              <li class="search-location-list-item"><img src="/public/images/flag/egypt.svg"> Egypt</li>
+              <li class="search-location-list-item"><img src="/public/images/flag/india.svg"> India</li>
+              <li class="search-location-list-item"><img src="/public/images/flag/sri-lanka.svg"> Sri-Lanka</li>
+              <li class="search-location-list-item"><img src="/public/images/flag/pakistan.svg"> Pakistan</li>
+              <li class="search-location-list-item"><img src="/public/images/flag/nepal.svg"> Nepal</li>
+              <li class="search-location-list-item"><img src="/public/images/flag/vietnam.svg"> Vietnam</li>
+              <li class="search-location-list-item"><img src="/public/images/flag/bangladesh.svg"> Bangladesh</li>
+          </ul>
+          <img src="/public/images/icon/arrow.svg" class="arrow-icon">
+      </div> -->
+      <button class="button purple-btn find-btn">Find Agents</button>
+    </div>
+    <div class="search-location-bottom">We found <span>7 agents</span></div>
+</div>

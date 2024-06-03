@@ -1,6 +1,7 @@
 :host {
   background: #f2f4f9;
   padding-bottom: 0;
+  padding-top: 64px;
 }
 
 .container {
@@ -60,6 +61,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 48px; /* 120% */
+  margin-bottom: 50px;
 }
 .custom-card-title {
   font-family: "Uncut Sans";

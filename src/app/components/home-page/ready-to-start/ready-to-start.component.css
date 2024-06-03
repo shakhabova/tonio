@@ -27,13 +27,10 @@
   background: #1c1c1c;
   text-decoration: none;
 }
-.get-started-title{
-  font-family: "uncutBold";
+.get-started-title {
+  color: #1c1c1c;
   font-size: 26px;
-  line-height: 31px;
-  margin-bottom: 24px;
-  text-align: center;
+  font-style: normal;
   font-weight: 700;
-  
+  line-height: normal;
 }
-

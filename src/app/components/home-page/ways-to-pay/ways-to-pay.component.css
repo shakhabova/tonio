@@ -1,18 +1,15 @@
 :host {
   display: block;
-  background-color: #EFEFEF;
+  background-color: #efefef;
   margin-top: 64px;
-  padding: 64px;
+  padding: 64px 0;
 }
 
-
-
-
-.title  {
-margin : 0 auto;
-margin-bottom: 55px;
+.title {
+  margin: 0 auto;
+  margin-bottom: 55px;
   width: 646px;
-  color: #1C1C1C;
+  color: #1c1c1c;
   text-align: center;
   font-size: 40px;
   font-style: normal;
@@ -66,31 +63,31 @@ margin-bottom: 55px;
 }
 
 .custom-card-title {
-  color: #1C1C1C;
+  color: #1c1c1c;
 
-font-size: 22px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin: 0;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
 }
 
 .custom-card-subtitle {
   color: #606060;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 27px; /* 150% */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px; /* 150% */
 }
 
-.label{
-  color: #FFF;
-    font-size: 13px;
-    display: inline-block;
-    font-style: normal;
-    font-weight: 600;
-    padding: 3px 10px;
-    line-height: 21px;
-    border-radius: 34px;
-    background: #E54A4A;
+.label {
+  color: #fff;
+  font-size: 13px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 600;
+  padding: 3px 10px;
+  line-height: 21px;
+  border-radius: 34px;
+  background: #e54a4a;
 }

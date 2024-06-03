@@ -29,6 +29,7 @@ type Tabs = 'send-money' | 'receive-money';
     ]
 })
 export class HomePageComponent {
+
   public currentTab: Tabs = 'send-money';
 
   countries: SelectItem[] = [
@@ -50,6 +51,8 @@ export class HomePageComponent {
       value: 'cash-pickup',
     },
   ];
+
+  
 
   public get isSendMoneyTabActive(): boolean {
     return this.currentTab === 'send-money';
