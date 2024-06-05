@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, input, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
-import { SelectItem } from '../select/select.component';
+import { getIconUrl } from '../../utils';
 
 @Component({
   selector: 'app-input-with-select',
@@ -15,11 +15,24 @@ import { SelectItem } from '../select/select.component';
   templateUrl: './input-with-select.component.html',
   styleUrl: './input-with-select.component.css'
 })
-export class InputWithSelectComponent {
-  selectItems = input<SelectItem[]>([]);
+export class InputWithSelectComponent<T> {
+  selectItems = input<T[] | null>([]);
   selectedItem = input<string>();
   inputValue = input<string>();
+  bindLabel = input<string>('label');
+  bindValue = input<string>('value');
+  bindIcon = input<string>();
 
-  selectChange = output<SelectItem>();
+  selectChange = output<T>();
+  selectedItemChange = output<string>();
   inputValueChange = output<string>();
+
+  getIcon(code: string): string {
+    return getIconUrl(code);
+  }
+
+  onSelectChange(item: T): void {
+    this.selectChange.emit(item);
+    this.selectedItemChange.emit(item[this.bindValue()]);
+  }
 }

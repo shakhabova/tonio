@@ -2,12 +2,8 @@ import { CommonModule } from '@angular/common';
 import { Component, input, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { getIconUrl } from '../../utils';
 
-export interface SelectItem<T = string> {
-  label: string;
-  value: T;
-  icon?: string;
-}
 
 @Component({
   selector: 'app-select',
@@ -20,9 +16,22 @@ export interface SelectItem<T = string> {
   templateUrl: './select.component.html',
   styleUrl: './select.component.css'
 })
-export class SelectComponent {
-  items = input<SelectItem[]>([]);
-  selected = input<string>();
+export class SelectComponent<T> {
+  items = input<T[] | null>([]);
+  selected = input<string | null>();
+  bindLabel = input<string>('label');
+  bindValue = input<string>('value');
+  bindIcon = input<string>()
 
-  select = output<SelectItem>();
+  select = output<T>();
+  selectedChange = output<string>();
+
+  getIcon(code: string): string {
+    return getIconUrl(code);
+  }
+
+  onChange(item: T): void {
+    this.select.emit(item);
+    this.selectedChange.emit(item[this.bindValue()]);
+  }
 }

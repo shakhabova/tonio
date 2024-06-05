@@ -1,13 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ReceiveCardsBlockComponent } from './receive-cards-block/receive-cards-block.component';
 import { WaysToPayComponent } from './ways-to-pay/ways-to-pay.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { WhyMyguavaComponent } from './why-myguava/why-myguava.component';
 import { ReadyToStartComponent } from './ready-to-start/ready-to-start.component';
 import { ReceiveMoneyComponent } from '../receive-money/receive-money.component';
-import { SelectComponent, SelectItem } from "../select/select.component";
+import { SelectComponent } from "../select/select.component";
 import { InputWithSelectComponent } from "../input-with-select/input-with-select.component";
+import { CalculatorApiService, CommissionAndRateRequestModel, CountryModel, CurrencyModel, RemittanceTypeModel } from '../../services/calculator-api.service';
+import { Observable, Subject, catchError, forkJoin, map, of, switchMap, tap } from 'rxjs';
 
 type Tabs = 'send-money' | 'receive-money';
 
@@ -28,31 +30,94 @@ type Tabs = 'send-money' | 'receive-money';
         InputWithSelectComponent
     ]
 })
-export class HomePageComponent {
-
+export class HomePageComponent implements OnInit {
+  private calculatorService = inject(CalculatorApiService);
   public currentTab: Tabs = 'send-money';
 
-  countries: SelectItem[] = [
-    {
-      label: 'USA',
-      value: 'usa',
-      icon: 'https://s3-api.guavapay.com/public-icons/countries/1x1/usa.svg'
-    },
-    {
-      label: 'Angola',
-      value: 'ago',
-      icon: 'https://s3-api.guavapay.com/public-icons/countries/1x1/ago.svg'
-    },
-  ];
+  defaultReceiverCountry?: CountryModel;
+  defaultReceiverCurrencies: CurrencyModel[] = [{ code: 'USD', countryCode: 'USA', isDefault: true }];
+  defaultSenderCurrencies: CurrencyModel[] = [{ code: 'USD', countryCode: 'USA', isDefault: true }];
+  receiverCurrencies: CurrencyModel[] = this.defaultReceiverCurrencies;
+  senderCurrencies: CurrencyModel[] = this.defaultSenderCurrencies;
 
-  chooseMethodItems: SelectItem[] = [
-    {
-      label: 'Cash pickup',
-      value: 'cash-pickup',
-    },
-  ];
+  sendAmount: string = '1';
+  senderCurrency = this.senderCurrencies[0].code;
 
-  
+  receiveAmount: string = '1';
+  receiverCurrency = this.receiverCurrencies[0].code;
+
+  receiverCountryCode: string = 'EGY';
+
+  updateCurrencies$ = new Subject<void>();
+  updateRates$ = new Subject<void>();
+
+  exchangeRate = 1;
+  commissionAmount = 0;
+  totalAmount = 1;
+
+  receiverCountries$: Observable<CountryModel[]> = this.calculatorService.getReceiverCountries()
+    .pipe(
+      tap(countries => this.defaultReceiverCountry = countries[0]),
+      tap(() => this.updateCurrencies$.next())
+    );
+
+  defaultPaymentMethods: RemittanceTypeModel[] = [{ paymentType: 'CASH', label: 'Cash pickup' }];
+  paymentMethods = this.defaultPaymentMethods;
+  paymentType = this.paymentMethods[0].paymentType;
+
+  ngOnInit(): void {
+    this.updateCurrencies$
+      .pipe(
+        switchMap(() => forkJoin([
+          this.calculatorService.getReceiverCurrencies(this.receiverCountryCode),
+          this.calculatorService.getRemittanceTypes(this.receiverCountryCode),
+        ])),
+      )
+      .subscribe(res => {
+        this.receiverCurrencies = res[0]?.length ? res[0] : this.defaultReceiverCurrencies;
+        this.receiverCurrency = this.receiverCurrencies[0].code;
+
+        this.paymentMethods = res[1]?.length ? res[1] : this.defaultPaymentMethods;
+
+        this.updateRates$.next();
+      });
+
+      this.updateRates$
+        .pipe(
+          map<void, CommissionAndRateRequestModel>(() => {
+            return {
+              senderCountryCode: 'GBR',
+              senderCurrency: this.senderCurrency,
+              receiverCountryCode: this.receiverCountryCode,
+              receiverCurrency: this.receiverCurrency,
+              amount: +this.sendAmount,
+              paymentType: this.paymentType,
+            }
+          }),
+          // tap(req => {debugger}),
+          switchMap(request => this.calculatorService.getCommissionAndRate(request).pipe(catchError(() => of(null)))),
+          
+        )
+        .subscribe(
+          {
+            next: rates => {
+              if (!rates) {
+                return;
+              }
+              this.exchangeRate = rates.exchangeRate;
+              this.commissionAmount = rates.comissionAmount;
+              this.totalAmount = rates.totalAmount;
+              this.receiveAmount = rates.conversionAmount.toString();
+            },
+            error: (err) => console.error(err),
+          });
+  }
+
+  updateAmount(): void {
+    const amount = +this.receiveAmount / this.exchangeRate;
+    this.sendAmount = amount.toFixed(2);
+    this.totalAmount = amount;
+  }
 
   public get isSendMoneyTabActive(): boolean {
     return this.currentTab === 'send-money';

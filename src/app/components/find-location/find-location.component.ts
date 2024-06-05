@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SelectComponent, SelectItem } from "../select/select.component";
+import { SelectComponent } from "../select/select.component";
 
 @Component({
     selector: 'app-find-location',
@@ -9,7 +9,7 @@ import { SelectComponent, SelectItem } from "../select/select.component";
     imports: [SelectComponent]
 })
 export class FindLocationComponent {
-    private countries: SelectItem[] = [    
+    private countries: any[] = [    
         { value: 'EGY', label: 'Egypt' },
         { value: 'IND', label: 'India' },
         { value: 'LKA', label: 'Sri-Lanka' },
@@ -21,7 +21,7 @@ export class FindLocationComponent {
 
     countryItems = this.countries.map(c => ({ ...c, icon: `https://s3-api.guavapay.com/public-icons/countries/1x1/${c.value.toLowerCase()}.svg` }));
 
-    onCountrySelect(country: SelectItem): void {
+    onCountrySelect(country: any): void {
         const index = this.countries.findIndex(c => c.value === country.value);
         const nodes = document.querySelectorAll<HTMLDivElement>('.map');
         if (nodes) {

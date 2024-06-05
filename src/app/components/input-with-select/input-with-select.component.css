@@ -19,6 +19,13 @@ input {
   height: 56px;
   border-right: none;
   outline: none;
+  padding-left: 16px;
+
+  color: #1C1C1C;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; 
 }
 
 ng-select {

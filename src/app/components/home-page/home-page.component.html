@@ -1,46 +1,99 @@
 <div class="container">
   <div class="title-wrapper">
     <h1 class="title">International money transfers at your fingertip</h1>
-    <p class="subtitle">Send money securely to family and friends around the globe. Get paid in the most convenient way. No need for a bank account. Just sign in, send or receive money on the go</p>
-    <div class="btn-block"><a href="https://account.remiton.global/auth/login?redirect=home" class="button" target="blank">Start right now!</a></div>
+    <p class="subtitle">
+      Send money securely to family and friends around the globe. Get paid in
+      the most convenient way. No need for a bank account. Just sign in, send or
+      receive money on the go
+    </p>
+    <div class="btn-block">
+      <a
+        href="https://account.remiton.global/auth/login?redirect=home"
+        class="button"
+        target="blank"
+        >Start right now!</a
+      >
+    </div>
   </div>
 </div>
 <div class="tabs-wrapper">
   <div class="tabs">
-    <div class="tab" [class.active]="isSendMoneyTabActive" (click)="onSendMoneyTab()">Send money</div>
-    <div class="tab" [class.active]="isReceiveMoneyTabActive" (click)="onReceiveMoneyTab()">Receive money</div>
+    <div
+      class="tab"
+      [class.active]="isSendMoneyTabActive"
+      (click)="onSendMoneyTab()"
+    >
+      Send money
+    </div>
+    <div
+      class="tab"
+      [class.active]="isReceiveMoneyTabActive"
+      (click)="onReceiveMoneyTab()"
+    >
+      Receive money
+    </div>
   </div>
   <section class="tab-content" *ngIf="isSendMoneyTabActive">
     <div class="form-wrapper">
       <div class="control-wrapper">
         <label>You send</label>
-        <app-input-with-select [selectItems]="countries" [selectedItem]="countries[0].value"></app-input-with-select>
+        <app-input-with-select
+          [selectItems]="senderCurrencies"
+          [(selectedItem)]="senderCurrency"
+          bindLabel="code"
+          bindValue="code"
+          bindIcon="countryCode"
+          [(inputValue)]="sendAmount"
+          (inputValueChange)="updateRates$.next()"
+        ></app-input-with-select>
       </div>
       <div class="control-wrapper">
         <label>To country</label>
-        <app-select [items]="countries" [selected]="countries[0].value"></app-select>
+        <app-select
+          [items]="receiverCountries$ | async"
+          [(selected)]="receiverCountryCode"
+          (selectedChange)="updateCurrencies$.next()"
+          bindLabel="name"
+          bindValue="code"
+          bindIcon="code"
+        ></app-select>
       </div>
       <div class="control-wrapper">
         <label>They receive</label>
-        <app-input-with-select [selectItems]="countries" [selectedItem]="countries[0].value"></app-input-with-select>
+        <app-input-with-select
+          [selectItems]="receiverCurrencies"
+          [(selectedItem)]="receiverCurrency"
+          (selectedItemChange)="updateRates$.next()"
+          bindLabel="code"
+          bindValue="code"
+          bindIcon="countryCode"
+          [(inputValue)]="receiveAmount"
+          (inputValueChange)="updateAmount()"
+        ></app-input-with-select>
       </div>
       <div class="control-wrapper">
         <label>Choose method</label>
-        <app-select [items]="chooseMethodItems" [selected]="chooseMethodItems[0].value"></app-select>
+        <app-select
+          [items]="paymentMethods"
+          [(selected)]="paymentType"
+          bindLabel="label"
+          bindValue="paymentType"
+          (selectedChange)="updateRates$.next()"
+        ></app-select>
       </div>
     </div>
     <div class="current-info-wrapper">
       <div class="currency-info">
-        <p class="label">Exchange rate is </p>
-        <p>1 USD = 0.76 GBP</p>
+        <p class="label">Exchange rate is</p>
+        <p>1 {{senderCurrency}} = {{exchangeRate}} {{receiverCurrency}}</p>
       </div>
       <div class="currency-info">
         <p class="label">Estimated fee</p>
-        <p>0.5 USD</p>
+        <p>{{commissionAmount}} {{senderCurrency}}</p>
       </div>
       <div class="currency-info">
         <p class="label">Total</p>
-        <p>100.5 USD </p>
+        <p>{{totalAmount | number : '1.0-2'}} {{senderCurrency}}</p>
       </div>
       <div class="currency info">
         <a class="button purple-btn" href="" target="blank">Send money</a>
@@ -53,28 +106,47 @@
 </div>
 
 <div class="container">
-  <h2 class="custom-card-block-title aos-init aos-animate" data-aos="fade-up">Ways to send money internationally</h2>
+  <h2 class="custom-card-block-title aos-init aos-animate" data-aos="fade-up">
+    Ways to send money internationally
+  </h2>
   <div class="custom-card-block">
-      <div class="custom-card">
-          <div class="custom-card-header aos-init aos-animate" data-aos="fade-up">
-              <img src="assets/images/Interface-1.png" alt="interface">
-          </div>
-          <div class="custom-card-body">
-              <p class="custom-card-title aos-init" data-aos="fade-up">Online</p>
-              <p class="custom-card-subtitle aos-init" data-aos="fade-up">Sign up and create your profile for free to send money online</p>
-              <a href="https://account.remiton.global/auth/login?redirect=home" target="blank" class="button purple-btn aos-init" data-aos="fade-up">Signup</a>
-          </div>
+    <div class="custom-card">
+      <div class="custom-card-header aos-init aos-animate" data-aos="fade-up">
+        <img src="assets/images/Interface-1.png" alt="interface" />
       </div>
-      <div class="custom-card">
-          <div class="custom-card-header aos-init aos-animate" data-aos="fade-up">
-              <img src="assets/images/Planet-1.png" alt="planet">
-          </div>
-          <div class="custom-card-body">
-              <p class="custom-card-title aos-init" data-aos="fade-up">Physical points</p>
-              <p class="custom-card-subtitle aos-init" data-aos="fade-up">Visit one of the Remiton’s agents’ location and send money</p>
-              <a href="/main/location" class="button purple-btn aos-init" data-aos="fade-up">See locations</a>
-          </div>
+      <div class="custom-card-body">
+        <p class="custom-card-title aos-init" data-aos="fade-up">Online</p>
+        <p class="custom-card-subtitle aos-init" data-aos="fade-up">
+          Sign up and create your profile for free to send money online
+        </p>
+        <a
+          href="https://account.remiton.global/auth/login?redirect=home"
+          target="blank"
+          class="button purple-btn aos-init"
+          data-aos="fade-up"
+          >Signup</a
+        >
       </div>
+    </div>
+    <div class="custom-card">
+      <div class="custom-card-header aos-init aos-animate" data-aos="fade-up">
+        <img src="assets/images/Planet-1.png" alt="planet" />
+      </div>
+      <div class="custom-card-body">
+        <p class="custom-card-title aos-init" data-aos="fade-up">
+          Physical points
+        </p>
+        <p class="custom-card-subtitle aos-init" data-aos="fade-up">
+          Visit one of the Remiton’s agents’ location and send money
+        </p>
+        <a
+          href="/main/location"
+          class="button purple-btn aos-init"
+          data-aos="fade-up"
+          >See locations</a
+        >
+      </div>
+    </div>
   </div>
 </div>
 <app-receive-cards-block></app-receive-cards-block>

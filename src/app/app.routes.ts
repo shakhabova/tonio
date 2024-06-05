@@ -4,6 +4,7 @@ import { TrackATransferComponent } from './components/track-a-transfer/track-a-t
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { FindLocationComponent } from './components/find-location/find-location.component';
+import { HelpComponent } from './components/help/help.component';
 
 export const routes: Routes = [
   
@@ -12,4 +13,5 @@ export const routes: Routes = [
   { path: 'contact-us', component: ContactUsComponent, title: 'Contact Us'},
   { path: 'about-us', component: AboutUsComponent, title: 'About Us'},
   { path: 'find-location', component: FindLocationComponent, title: 'Find a Location' },
+  { path: 'help', component: HelpComponent, title: 'Help'},
 ];
