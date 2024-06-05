@@ -26,6 +26,7 @@
   border-radius: 8px;
   background: #1c1c1c;
   text-decoration: none;
+  margin-top: 26px;
 }
 .get-started-title {
   color: #1c1c1c;
@@ -33,4 +34,9 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  text-align: center;
+}
+
+p {
+  margin: 0;
 }
