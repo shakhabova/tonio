@@ -34,6 +34,8 @@ export class HomePageComponent implements OnInit {
   private calculatorService = inject(CalculatorApiService);
   public currentTab: Tabs = 'send-money';
 
+
+
   defaultReceiverCountry?: CountryModel;
   defaultReceiverCurrencies: CurrencyModel[] = [{ code: 'USD', countryCode: 'USA', isDefault: true }];
   defaultSenderCurrencies: CurrencyModel[] = [{ code: 'USD', countryCode: 'USA', isDefault: true }];
