@@ -42,6 +42,51 @@
     0px 1.878px 7.889px 0px rgba(101, 101, 101, 0.04);
 }
 
+#benefit {
+  background-color: white;
+}
+
 a {
   text-decoration: none;
+}
+
+.custom-card-block {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 65px;
+}
+ .benefit-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 165px;
+  width: 100%;
+}
+
+#about{
+  padding-top: 40px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.about-card {
+  display: flex;
+  margin-bottom: 104px;
+  gap: 88px;
+}
+
+.about-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+
+.about-card img {
+  width: 608px;
+  border-radius: 12px;
 }

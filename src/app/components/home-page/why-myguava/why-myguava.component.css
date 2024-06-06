@@ -16,8 +16,9 @@
 .custom-card-block {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 35px;
+  gap: 51px;
 }
 
 .custom-card {

@@ -9,6 +9,7 @@ import { CashPickupComponent } from './components/help/cash-pickup/cash-pickup.c
 import { BankTransferComponent } from './components/help/bank-transfer/bank-transfer.component';
 import { CreditCardComponent } from './components/help/credit-card/credit-card.component';
 import { HelpCenterComponent } from './components/help/help-center/help-center.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
   
@@ -21,5 +22,6 @@ export const routes: Routes = [
   { path: 'cash-pickup', component: CashPickupComponent, title: 'Cash pickup'},
   { path: 'bank-transfer', component: BankTransferComponent, title: 'Bank transfer'},
   { path: 'credit-card', component: CreditCardComponent, title: 'Credit/Debit card'},
-  { path: 'help-center', component: HelpCenterComponent, title: 'Help center'}
+  { path: 'help-center', component: HelpCenterComponent, title: 'Help center'},
+  { path: 'privacy-policy', component: PrivacyPolicyComponent, title: 'Privacy Policy'}
 ];
