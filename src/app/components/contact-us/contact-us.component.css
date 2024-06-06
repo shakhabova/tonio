@@ -11,21 +11,23 @@
   width: 722px;
 }
 
-#contact-form{
+#contact-form {
   width: 848px;
   margin: auto;
   background: #ffffff;
   border-radius: 12px;
   padding: 41px 45px;
-  margin-top: 100px; 
+  margin-top: 100px;
 
-  box-shadow: 0px 27px 80px 0px rgba(135, 135, 135, 0.07), 0px 6.031px 17.869px 0px rgba(135, 135, 135, 0.04), 0px 1.796px 5.32px 0px rgba(135, 135, 135, 0.03);
+  box-shadow: 0px 27px 80px 0px rgba(135, 135, 135, 0.07),
+    0px 6.031px 17.869px 0px rgba(135, 135, 135, 0.04),
+    0px 1.796px 5.32px 0px rgba(135, 135, 135, 0.03);
 }
 
- label {
+label {
   font-size: 16px;
   line-height: 24px;
-  color: #1C1C1C;
+  color: #1c1c1c;
   margin-bottom: 7px;
   font-weight: 600;
   display: inline-block;
@@ -40,7 +42,7 @@
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-    gap: 32px;
+  gap: 32px;
 }
 
 .form-row .contact-form-control:first-child {
@@ -53,10 +55,10 @@ input[type="tel"],
 textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #E4E8F0;
+  border: 1px solid #e4e8f0;
   border-radius: 5px;
   font-size: 16px;
-  background-color: #F4F6F9;
+  background-color: #f4f6f9;
 }
 
 .btn-block {
@@ -73,4 +75,96 @@ textarea {
   cursor: pointer;
 }
 
+.addresses {
+  background: #F2F4F9;
+  padding-top: 48px;
+  padding-bottom: 76px;
+  margin-top: 56px;
+}
 
+.cards-block {
+  display: grid;
+  grid-template-columns: 404px 404px;
+  justify-items: center;
+  row-gap: 24px;
+  column-gap: 32px;
+  justify-content: center;
+}
+
+.cards-title {
+  margin-bottom: 64px;
+  text-align: center;
+  color: #1c1c1c;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.address-card {
+  width: 404px;
+  padding: 31px 33px;
+  padding-bottom: 19px;
+
+  border-radius: 16px;
+  border: 1px solid #eaecf4;
+  background: #fff;
+  box-shadow: 0px 9px 38px 0px rgba(107, 107, 107, 0.11),
+    0px 2.01px 8.488px 0px rgba(107, 107, 107, 0.07),
+    0px 0.599px 2.527px 0px rgba(107, 107, 107, 0.04);
+}
+
+.flag {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.address-card-title {
+  color: #1c1c1c;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 8px;
+}
+
+.address-card-subtitle {
+  color: #606060;
+
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+
+.address-card-contact {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.contact-info {
+  color: #606060;
+
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+@media only screen and (max-width: 920px) {
+  .cards-block {
+    grid-template-columns: 404px;
+  }
+}

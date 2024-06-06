@@ -1,5 +1,5 @@
 .title {
-  color: #f8f5ff;
+  color: white;
   text-align: center;
   font-family: "Uncut Sans";
   font-size: 55px;
@@ -90,3 +90,32 @@ a {
   width: 608px;
   border-radius: 12px;
 }
+
+.card-title {
+  color: #1C1C1C;
+
+text-align: center;
+font-family: "Uncut Sans";
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 48px;
+margin-bottom: 24px;
+}
+
+.card-text {
+  color: #606060;
+
+font-family: "Uncut Sans";
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 21px;
+}
+#about .card-text p:not(:last-child) {
+  margin-bottom: 15px;}
+
+  .benefit-card p {
+    text-align: center;
+    margin-top: 0;
+  }
