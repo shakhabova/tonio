@@ -10,6 +10,8 @@ import { BankTransferComponent } from './components/help/bank-transfer/bank-tran
 import { CreditCardComponent } from './components/help/credit-card/credit-card.component';
 import { HelpCenterComponent } from './components/help/help-center/help-center.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
 
 export const routes: Routes = [
   
@@ -19,9 +21,11 @@ export const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent, title: 'About Us'},
   { path: 'find-location', component: FindLocationComponent, title: 'Find a Location' },
   { path: 'help', component: HelpComponent, title: 'Help'},
-  { path: 'cash-pickup', component: CashPickupComponent, title: 'Cash pickup'},
-  { path: 'bank-transfer', component: BankTransferComponent, title: 'Bank transfer'},
-  { path: 'credit-card', component: CreditCardComponent, title: 'Credit/Debit card'},
+  { path: 'help/cash-pickup', component: CashPickupComponent, title: 'Cash pickup'},
+  { path: 'help/bank-transfer', component: BankTransferComponent, title: 'Bank transfer'},
+  { path: 'help/credit-card', component: CreditCardComponent, title: 'Credit/Debit card'},
   { path: 'help-center', component: HelpCenterComponent, title: 'Help center'},
-  { path: 'privacy-policy', component: PrivacyPolicyComponent, title: 'Privacy Policy'}
+  { path: 'privacy-policy', component: PrivacyPolicyComponent, title: 'Privacy Policy'},
+  { path: 'blog', component:BlogComponent, title: 'Blog'},
+  { path: 'terms-and-conditions', component: TermsAndConditionsComponent, title: 'Terms and Conditions'}
 ];

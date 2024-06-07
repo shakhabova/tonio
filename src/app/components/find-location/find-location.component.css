@@ -1,3 +1,11 @@
+:host {
+  padding: 0;
+    max-width: 757px;
+    margin: auto;
+    position: relative;
+    display: block;
+}
+
 .title-wrapper {
   display: flex;
   flex-direction: column;
@@ -27,10 +35,10 @@
 }
 
 .search-location-block {
-  width: 757px;
+  max-width: 757px;
+  width: 100%;
   margin: 0 auto;
   padding: 42px 56px;
-margin-top: 255px;
   border-radius: 12px;
   background: #fff;
   box-shadow: 0px 27px 80px 0px rgba(135, 135, 135, 0.07),
@@ -51,11 +59,14 @@ margin-top: 255px;
 .search-location-select {
   display: flex;
   align-items: center;
-  gap: 24px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .search-location-select app-select {
-  flex-grow: 1;
+  max-width: calc(100% - 175px);
+    width: 100%;
 }
 
 .find-btn {
@@ -86,19 +97,79 @@ margin-top: 255px;
 }
 
 .map {
+  position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
   display: none;
-  
 }
 
 .map-container {
-  
-  display: flex;
-  justify-content: center;
   margin-top: 40px;
-  
- 
+  position: relative;
+  min-height: 470px;
+  filter: drop-shadow(0px 15px 63px rgba(101, 101, 101, 0.08)) drop-shadow(0px 1.87823px 7.88858px rgba(101, 101, 101, 0.04));
 }
-iframe{
+iframe {
   border-radius: 16px;
+    width: 100%;
+    height: 100%;
 }
 
+app-ready-to-start {
+  padding: 65px 0;
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 46px;
+    line-height: 52px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 396px;
+  }
+
+  .search-location-block {
+    margin-top: 0;
+    padding: 30px 24px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .search-location-select {
+    justify-content: flex-end;
+  }
+
+  .search-location-select app-select {
+    max-width: 100%;
+  }
+
+  .find-btn {
+    margin-top: 24px;
+    padding: 14px 27px;
+  }
+
+  .map-container {
+    min-height: 240px;
+}
+}
+
+@media only screen and (min-width: 1440px) {
+  ::ng-deep body .container, body .container-lg, body .container-md, body .container-sm, body .container-xl {
+      max-width: 1340px;
+  }
+}

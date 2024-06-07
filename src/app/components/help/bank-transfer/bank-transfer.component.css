@@ -34,8 +34,18 @@ margin-bottom: 23px;
 }
 .container{
   margin: 0 auto;
-  width: 608px;
+  max-width: 608px;
+  width: 100%;
 }
 a {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 575px) {
+  .title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+  }
 }

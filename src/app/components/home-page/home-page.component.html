@@ -9,7 +9,6 @@
     <div class="btn-block">
       <a
         href="https://account.remiton.global/auth/login?redirect=home"
-        class="button"
         target="blank"
         >Start right now!</a
       >
@@ -29,8 +28,10 @@
       class="tab"
       [class.active]="isReceiveMoneyTabActive"
       (click)="onReceiveMoneyTab()"
+      style="pointer-events: none;"
     >
       Receive money
+      <span class="coming-label">Coming soon</span>
     </div>
   </div>
   <section class="tab-content" *ngIf="isSendMoneyTabActive">

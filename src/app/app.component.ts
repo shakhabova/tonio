@@ -20,7 +20,7 @@ export class AppComponent implements AfterViewInit {
   private router = inject(Router);
   title = 'tonio';
   displayGlobe = signal(false);
-  urlsWithGlobe = ['track-transfer', 'contact-us',  'find-location', 'help']
+  urlsWithGlobe = [ 'contact-us',  'find-location', 'help']
 
   ngAfterViewInit(): void {
     this.router.events

@@ -1,41 +1,49 @@
-:host{
+:host {
   background-color: white;
   display: block;
   margin-top: 44px;
-  padding: 52px; 
+  padding: 52px;
 }
 #breadcrumbs ul {
   display: flex;
   list-style: none;
   padding: 0;
-
 }
-.title{
-  color: #1C1C1C;
-font-family: "Uncut Sans";
-font-size: 40px;
-font-style: normal;
-font-weight: 700;
-line-height: 48px;
-margin-bottom: 23px;
+.title {
+  color: #1c1c1c;
+  font-family: "Uncut Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  margin-bottom: 23px;
 }
 
-.cash-pickup-text{
+.cash-pickup-text {
   padding-left: 20px;
-    max-width: 610px;
-   
+  max-width: 610px;
 }
-.cash-pickup-text li{
+.cash-pickup-text li {
   margin-bottom: 10px;
 }
-.container img{
+.container img {
   transform: rotate(-90deg);
   margin: 0 20px 4px;
 }
-.container{
+.container {
   margin: 0 auto;
-  width: 608px;
+  max-width: 608px;
+  width: 100%;
 }
 a {
   text-decoration: none;
+}
+
+@media only screen and (max-width: 575px) {
+  .title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+  }
 }

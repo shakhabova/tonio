@@ -1,5 +1,6 @@
 :host {
-  padding-top: 90px;
+  display: block;
+  margin-bottom: 64px;
 }
 
 .get-started-block {
@@ -39,4 +40,13 @@
 
 p {
   margin: 0;
+}
+
+@media only screen and (max-width: 575px) {
+  .get-started-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 }

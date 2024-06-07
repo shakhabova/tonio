@@ -5,94 +5,98 @@
   </p>
 </div>
 
-<div class="search-location-block">
-  <div class="search-location-block-title">Country</div>
-  <div class="search-location-select">
-    <app-select
-      [items]="countryItems"
-      [selected]="countryItems[0].value"
-      (select)="onCountrySelect($event)"
-      bindIcon="value"
-    ></app-select>
-    <button class="button purple-btn find-btn">Find Agents</button>
+<div class="container">
+  <div class="search-location-block">
+    <div class="search-location-block-title">Country</div>
+    <div class="search-location-select">
+      <app-select
+        [items]="countryItems"
+        [selected]="countryItems[0].value"
+        (select)="onCountrySelect($event)"
+        bindIcon="value"
+      ></app-select>
+      <button class="button purple-btn find-btn">Find Agents</button>
+    </div>
   </div>
-</div>
-<div class="map-container aos-init" data-aos="fade-up">
-  <div class="map" style="display: block">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3566715.7893984965!2d29.667296596870766!3d29.190567643960406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sEgypt%20-%20BDC%20(Banque%20du%20Caire)!5e0!3m2!1sen!2saz!4v1689929946787!5m2!1sen!2saz"
-      width="600"
-      height="450"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+  <div class="map-container aos-init" data-aos="fade-up">
+    <div class="map" style="display: block">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3566715.7893984965!2d29.667296596870766!3d29.190567643960406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sEgypt%20-%20BDC%20(Banque%20du%20Caire)!5e0!3m2!1sen!2saz!4v1689929946787!5m2!1sen!2saz"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d29008684.524555013!2d10.776491040317637!3d27.43501947424279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sIndia%20-%20Muthoot%20Finance!5e0!3m2!1sen!2saz!4v1689930006524!5m2!1sen!2saz"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2026198.164845517!2d79.28365039184067!3d7.306814963711211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sSri-Lanka%20-%20Muthoot%20Finance%3B%20DFCC%20Bank!5e0!3m2!1sen!2saz!4v1689930059457!5m2!1sen!2saz"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d32456138.8655664!2d58.681242871664736!3d6.7782509317037105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPakistan%20-%20JS%20Bank%3B%20UBL%20(United%20Bank%20Limited)!5e0!3m2!1sen!2saz!4v1689930094638!5m2!1sen!2saz"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1812173.8930111479!2d84.45966345485651!3d27.487866498147998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sNepal%20-%20MBL%20(Machhapuchchhre%20Bank%20Limited)!5e0!3m2!1sen!2saz!4v1689930126729!5m2!1sen!2saz"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3920190.2611562125!2d103.24374556354245!3d16.35812244359755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sVietnam%20-%20Vietcombank!5e0!3m2!1sen!2saz!4v1689930174061!5m2!1sen!2saz"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1885197.2280506324!2d89.90526710930116!3d22.652825319363224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBangladesh%20-%20BRAC%20Bank%20Limited!5e0!3m2!1sen!2saz!4v1689930211094!5m2!1sen!2saz"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
   </div>
-  <div class="map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d29008684.524555013!2d10.776491040317637!3d27.43501947424279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sIndia%20-%20Muthoot%20Finance!5e0!3m2!1sen!2saz!4v1689930006524!5m2!1sen!2saz"
-      width="600"
-      height="450"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-  <div class="map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2026198.164845517!2d79.28365039184067!3d7.306814963711211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sSri-Lanka%20-%20Muthoot%20Finance%3B%20DFCC%20Bank!5e0!3m2!1sen!2saz!4v1689930059457!5m2!1sen!2saz"
-      width="600"
-      height="450"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-  <div class="map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d32456138.8655664!2d58.681242871664736!3d6.7782509317037105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sPakistan%20-%20JS%20Bank%3B%20UBL%20(United%20Bank%20Limited)!5e0!3m2!1sen!2saz!4v1689930094638!5m2!1sen!2saz"
-      width="600"
-      height="450"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-  <div class="map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1812173.8930111479!2d84.45966345485651!3d27.487866498147998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sNepal%20-%20MBL%20(Machhapuchchhre%20Bank%20Limited)!5e0!3m2!1sen!2saz!4v1689930126729!5m2!1sen!2saz"
-      width="600"
-      height="450"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-  <div class="map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3920190.2611562125!2d103.24374556354245!3d16.35812244359755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sVietnam%20-%20Vietcombank!5e0!3m2!1sen!2saz!4v1689930174061!5m2!1sen!2saz"
-      width="600"
-      height="450"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-  <div class="map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1885197.2280506324!2d89.90526710930116!3d22.652825319363224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBangladesh%20-%20BRAC%20Bank%20Limited!5e0!3m2!1sen!2saz!4v1689930211094!5m2!1sen!2saz"
-      width="600"
-      height="450"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
+
+  <app-ready-to-start></app-ready-to-start>
 </div>

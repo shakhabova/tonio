@@ -6,6 +6,11 @@ footer {
   flex-direction: column;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -21,13 +26,21 @@ a {
   justify-content: space-between;
   max-width: 690px;
   width: 100%;
-  
 }
 li {
   list-style: none;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
 }
 .footer-menu-list li:first-child {
   margin-bottom: 24px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
 }
 
 .footer-right-block {
@@ -63,11 +76,18 @@ li {
 
 .copyright {
   margin-top: 73px;
-
 }
 
 .copyright-text {
   margin: 0;
+}
+.business-btn {
+  margin-top: 49px;
+}
+
+.business-btn,
+.business-btn img {
+  color: #1c1c1c;
 }
 
 footer .copyright .container {
@@ -79,8 +99,8 @@ footer .copyright .container {
 
 .social-links {
   display: flex;
-    gap: 12px;
-    align-items: center;
+  gap: 12px;
+  align-items: center;
 }
 
 .card-logo {
@@ -88,4 +108,25 @@ footer .copyright .container {
   gap: 35px;
   align-items: center;
   margin-right: 48px;
+}
+
+.footer-left-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-menu-block {
+    max-width: unset;
+  }
+
+  .footer-right-block {
+    align-self: center;
+  }
 }

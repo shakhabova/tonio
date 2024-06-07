@@ -15,14 +15,13 @@
 .signup-info-block {
   display: flex;
   gap: 37px;
+  justify-content: center;
 }
 
 .signup-info-left-block {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  flex-grow: 1;
-  margin-left: 110px;
 }
 .signup-info-card {
   display: flex;
@@ -38,16 +37,21 @@
   border-radius: 12px;
 }
 
+.signup-info-card-text {
+  max-width: 330px;
+}
+
 .signup-info-right-block {
-  width: 850px;
+  max-width: 850px;
   align-self: flex-end;
 }
 
 .signup-info-right-block img {
-  width: 850px;
+  max-width: 850px;
+  width: 100%;
 }
 
-@media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1200px) {
   :host {
     padding-bottom: 41px;
   }

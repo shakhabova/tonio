@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { SelectComponent } from "../select/select.component";
+import { ReadyToStartComponent } from '../home-page/ready-to-start/ready-to-start.component';
 
 @Component({
     selector: 'app-find-location',
     standalone: true,
     templateUrl: './find-location.component.html',
     styleUrl: './find-location.component.css',
-    imports: [SelectComponent]
+    imports: [SelectComponent, ReadyToStartComponent]
 })
 export class FindLocationComponent {
     private countries: any[] = [    

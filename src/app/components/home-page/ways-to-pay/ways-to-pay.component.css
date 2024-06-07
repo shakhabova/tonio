@@ -8,7 +8,8 @@
 .title {
   margin: 0 auto;
   margin-bottom: 55px;
-  width: 646px;
+  max-width: 646px;
+  width: 100%;
   color: #1c1c1c;
   text-align: center;
   font-size: 40px;
@@ -90,4 +91,14 @@
   line-height: 21px;
   border-radius: 34px;
   background: #e54a4a;
+}
+
+@media only screen and (max-width: 575px) {
+  .title {
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+  }
 }

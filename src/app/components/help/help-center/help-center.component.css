@@ -10,7 +10,7 @@
 
 .faq-title {
   padding-top: 30px;
-  color: #1C1C1C;
+  color: #1c1c1c;
   font-family: "Uncut Sans";
   font-size: 24px;
   font-style: normal;
@@ -37,10 +37,10 @@
   box-shadow: none;
   padding-left: 0;
 
-    font-size: 17px;
-    line-height: 24px;
-    color: #1c1c1c;
-    margin-bottom: 0;
+  font-size: 17px;
+  line-height: 24px;
+  color: #1c1c1c;
+  margin-bottom: 0;
 }
 
 .accordion-body * {
@@ -51,6 +51,11 @@
   color: #5d6677;
 }
 
+app-ready-to-start {
+  padding: 65px 0;
+  display: block;
+}
+
 @media only screen and (max-width: 767px) {
   .accordion {
     flex-direction: column;
@@ -58,8 +63,12 @@
 
   .accordion-block {
     width: 100%;
-}
-.container {
-  max-width: 540px;
-}
+  }
+  .container {
+    max-width: 540px;
+  }
+  app-ready-to-start {
+    padding: 35px 0;
+    display: block;
+  }
 }

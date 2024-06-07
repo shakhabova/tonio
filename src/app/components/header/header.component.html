@@ -33,12 +33,21 @@
         </li>
       </ul>
     </nav>
-    <a
-      href="https://account.remiton.global/auth/login?redirect=home"
-      target="_blank"
-      class="button login-btn"
-      >Sign in/Sign up</a
-    >
+    <div class="header-btns">
+      <a
+        href="https://agent.remiton.global/company/registration"
+        target="_blank"
+        class="button business-btn"
+        >
+        Go to business
+        <img width="16" src="assets/icons/arrow-right.png">
+      </a>
+      <a
+        href="#"
+        target="_blank"
+        class="button login-btn"
+        >Sign in/Sign up</a>
+    </div>
     <div class="nav-btn" (click)="mobileMenuOpened.set(!mobileMenuOpened())">
       <div class="btn-bar menu-btn"></div>
       <div class="btn-bar menu-btn"></div>
@@ -72,11 +81,11 @@
                 >
                   <div class="accordion-body">
                     <ul class="sub-mobile-menu">
-                      <li><a href="/main/help">Help Center</a></li>
-                      <li><a href="/main/faq">FAQ</a></li>
-                      <li><a href="/main/cash">Cash pickup</a></li>
-                      <li><a href="/main/btransfer">Bank transfer</a></li>
-                      <li><a href="/main/card">Credit/Debit card</a></li>
+                      <li><a routerLink="/help" routerLinkActive="router-link-active">Help Center</a></li>
+                      <li><a routerLink="/help-center" routerLinkActive="router-link-active" >FAQ</a></li>
+                      <li><a routerLink="/help/cash-pickup" routerLinkActive="router-link-active">Cash pickup</a></li>
+                      <li><a routerLink="/help/bank-transfer" routerLinkActive="router-link-active">Bank transfer</a></li>
+                      <li><a routerLink="/help/credit-card" routerLinkActive="router-link-active">Credit/Debit card</a></li>
                     </ul>
                   </div>
                 </div>
@@ -101,9 +110,9 @@
                 >
                   <div class="accordion-body">
                     <ul class="sub-mobile-menu">
-                      <li><a href="/main/about">About</a></li>
-                      <li><a href="/main/contact">Contact us</a></li>
-                      <li><a href="/blog">News/Blog</a></li>
+                      <li><a routerLink="/about-us" routerLinkActive="router-link-active">About</a></li>
+                      <li><a routerLink="/contact-us" routerLinkActive="router-link-active">Contact us</a></li>
+                      <li><a routerLink="/blog" routerLinkActive="router-link-active">News/Blog</a></li>
                     </ul>
                   </div>
                 </div>
@@ -128,9 +137,9 @@
                 >
                   <div class="accordion-body">
                     <ul class="sub-mobile-menu">
-                      <li><a href="/main/terms">Terms of Service</a></li>
-                      <li><a href="/main/privacy">Privacy policy</a></li>
-                      <li><a href="/main/cookies">Cookies policy</a></li>
+                      <li><a routerLink="/terms-and-conditions" routerLinkActive="router-link-active">Terms of Service</a></li>
+                      <li><a routerLink="/privacy-policy" routerLinkActive="router-link-active">Privacy policy</a></li>
+                      
                     </ul>
                   </div>
                 </div>
@@ -152,23 +161,23 @@
               </a>
             </div>
             <a
-              href="https://account.remiton.global/auth/login?redirect=home"
+              href="#"
               target="_blank"
               class="button mobile-login-btn"
               >Sign in/Sign up</a
             >
         </div>
       <div class="social-links">
-        <a href="" target="_blank"
+        <a href="https://www.facebook.com/people/Tonio/100088100730315/" target="_blank"
           ><img src="assets/icons/Facebook.svg" alt="facebook"
         /></a>
-        <a href="" target="_blank"
+        <a href="https://www.instagram.com/tonio_co_uk" target="_blank"
           ><img src="assets/icons/Instagram.svg" alt="instagram"
         /></a>
-        <a href="" target="_blank"
+        <a href="https://twitter.com/tonio_co_uk" target="_blank"
           ><img src="assets/icons/Twitter.svg" alt="twitter"
         /></a>
-        <a href="" target="_blank"
+        <a href="https://www.linkedin.com/company/tonio-app/" target="_blank"
           ><img src="assets/icons/LinkedIn.svg" alt="linkedin"
         /></a>
       </div>

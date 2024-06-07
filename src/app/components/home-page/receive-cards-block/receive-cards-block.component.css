@@ -5,7 +5,7 @@
   margin-bottom: 50px;
 }
 
-.title-block h2 {
+.title {
   margin-top: 0;
   margin-bottom: 60px;
   margin-left: 20px;
@@ -41,7 +41,7 @@
 
 .custom-card {
   position: relative;
-  height: 416px;
+  margin-bottom: 32px;
   width: 389px;
 }
 
@@ -129,5 +129,14 @@ line-height: 27px; /* 150% */
 
   .title-block {
     margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .title {
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 32px; /* 133.333% */
   }
 }

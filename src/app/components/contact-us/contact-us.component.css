@@ -8,11 +8,13 @@
   line-height: 60px;
   margin: 0 auto;
   margin-top: 86px;
-  width: 722px;
+  max-width: 722px;
+  width: 100%;
 }
 
 #contact-form {
-  width: 848px;
+  max-width: 848px;
+  width: 100%;
   margin: auto;
   background: #ffffff;
   border-radius: 12px;
@@ -37,6 +39,7 @@ label {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  flex-wrap: wrap;
 }
 
 .form-row {
@@ -163,8 +166,27 @@ textarea {
   line-height: 24px;
 }
 
+@media only screen and (max-width: 991px) {
+  .form-row {
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
 @media only screen and (max-width: 920px) {
   .cards-block {
     grid-template-columns: 404px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .title {
+font-size: 26px;
+font-style: normal;
+font-weight: 700;
+line-height: 36px; /* 138.462% */
+  }
+  #contact-form {
+      padding: 24px 30px;
   }
 }

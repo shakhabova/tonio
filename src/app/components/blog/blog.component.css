@@ -1,0 +1,18 @@
+.title {
+  margin: auto;
+  max-width: 825px;
+  color: #f8f5ff;
+  font-size: 55px;
+  line-height: 60px;
+  margin-bottom: 24px;
+}
+.subtitle {
+  margin: auto;
+  max-width: 455px;
+  margin-bottom: 24px;
+  color: #f8f5ff;
+  text-align: center;
+  font-family: "uncutMedium";
+  font-size: 20px;
+  line-height: 30px;
+}

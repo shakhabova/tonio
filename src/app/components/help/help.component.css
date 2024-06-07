@@ -8,7 +8,8 @@
   line-height: 60px;
   margin: 0 auto;
   margin-top: 107px;
-  width: 722px;
+  max-width: 722px;
+  width: 100%;
 }
 
 .subtitle {
@@ -19,7 +20,8 @@
   font-style: normal;
   font-weight: 500;
   line-height: 30px;
-  width: 455px;
+  max-width: 455px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 24px;
 }
@@ -31,7 +33,7 @@
   position: relative;
 }
 
-#faq .accordion {
+.accordion {
   max-width: 850px;
   margin: auto;
   margin-top: 32px;
@@ -42,30 +44,30 @@
   border-radius: 12px;
   padding: 56px;
 }
-#faq .accordion-item {
+.accordion-item {
   padding: 14px 30px 14px 40px;
   background: transparent;
   border: 1px solid transparent;
   transition: all 0.2s linear;
 }
-#faq .accordion-title {
+.accordion-title {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
   font-size: 18px;
   font-family: "uncutSemiBold";
 }
-#faq .accordion-subtitle {
+.accordion-subtitle {
   display: none;
   margin-top: 8px;
 }
 
-#faq .accordion-item.active {
+.accordion-item.active {
   background: #f4f6f9;
   border: 1px solid #e4e8f0;
   border-radius: 8px;
 }
-#faq .accordion-item.active .accordion-icon {
+.accordion-item.active .accordion-icon {
   transform: rotate(180deg);
 }
 
@@ -103,18 +105,35 @@
   display: block;
   padding: 16px;
   margin-top: 6px;
-
 }
 
-.sign-up-list{
-  color: #5D6677;
-font-family: "Uncut Sans";
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; 
+.sign-up-list {
+  color: #5d6677;
+  font-family: "Uncut Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 .sign-up-list li:not(:first-child) {
- margin-top: 16px;
+  margin-top: 16px;
+}
+
+@media only screen and (max-width: 575px) {
+  .title {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 138.462% */
+  }
+  .subtitle {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px; /* 150% */
+  }
+  .accordion {
+    padding: 0;
+  }
 }

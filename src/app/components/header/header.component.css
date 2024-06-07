@@ -54,24 +54,24 @@ header {
 
 .wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   overflow: hidden;
   align-items: center;
   margin-top: 54px;
-  padding: 0 104px;
+  padding: 0 14px;
+  gap: 68px
 }
 
 .header-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1011px;
-  width: 100%;
 }
 
 .menu {
   display: flex;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   list-style: none;
   justify-content: center;
   gap: 48px;
@@ -266,6 +266,18 @@ header.open .mobile-menu .background .portion:last-child {
   bottom: 0;
   width: 100%;
 }
+
+.header-btns {
+  display: flex;
+  gap: 16px;
+}
+
+.business-btn {
+  border-radius: 8px;
+border: 1px solid #FFF;
+background-color: transparent;
+}
+
 ::ng-deep body:has(header.open) {
   overflow: hidden;
 }
@@ -287,8 +299,13 @@ header.open .mobile-menu .background .portion:last-child {
     display: none;
   }
 
+  .business-btn {
+    display: none;
+  }
+
   .wrapper {
     margin-top: 35px;
     padding: 0 15px;
+    justify-content: space-between;
   }
 }

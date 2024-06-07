@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { Component, DestroyRef, OnInit, inject } from '@angular/core';
 import { ReceiveCardsBlockComponent } from './receive-cards-block/receive-cards-block.component';
 import { WaysToPayComponent } from './ways-to-pay/ways-to-pay.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -32,6 +33,7 @@ type Tabs = 'send-money' | 'receive-money';
 })
 export class HomePageComponent implements OnInit {
   private calculatorService = inject(CalculatorApiService);
+  private destoryRef = inject(DestroyRef);
   public currentTab: Tabs = 'send-money';
 
   defaultReceiverCountry?: CountryModel;
@@ -72,6 +74,7 @@ export class HomePageComponent implements OnInit {
           this.calculatorService.getReceiverCurrencies(this.receiverCountryCode),
           this.calculatorService.getRemittanceTypes(this.receiverCountryCode),
         ])),
+        takeUntilDestroyed(this.destoryRef),
       )
       .subscribe(res => {
         this.receiverCurrencies = res[0]?.length ? res[0] : this.defaultReceiverCurrencies;
@@ -94,9 +97,8 @@ export class HomePageComponent implements OnInit {
               paymentType: this.paymentType,
             }
           }),
-          // tap(req => {debugger}),
           switchMap(request => this.calculatorService.getCommissionAndRate(request).pipe(catchError(() => of(null)))),
-          
+          takeUntilDestroyed(this.destoryRef),
         )
         .subscribe(
           {
