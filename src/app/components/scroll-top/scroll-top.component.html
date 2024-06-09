@@ -1,0 +1,8 @@
+<!--Scroll to top-->
+<div
+  class="scroll-to-top"
+  [style.display]="windowScrolled$ | async"
+  (click)="scrollToTop()"
+>
+  <img src="assets/icons/chevron-down.svg">
+</div>

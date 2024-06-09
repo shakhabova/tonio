@@ -11,6 +11,8 @@ import { SelectComponent } from "../select/select.component";
 import { InputWithSelectComponent } from "../input-with-select/input-with-select.component";
 import { CalculatorApiService, CommissionAndRateRequestModel, CountryModel, CurrencyModel, RemittanceTypeModel } from '../../services/calculator-api.service';
 import { Observable, Subject, catchError, forkJoin, map, of, switchMap, tap } from 'rxjs';
+import { FindLocationComponent } from '../find-location/find-location.component';
+import { RouterModule } from '@angular/router';
 
 type Tabs = 'send-money' | 'receive-money';
 
@@ -28,7 +30,9 @@ type Tabs = 'send-money' | 'receive-money';
         ReadyToStartComponent,
         ReceiveMoneyComponent,
         SelectComponent,
-        InputWithSelectComponent
+        InputWithSelectComponent,
+        FindLocationComponent,
+        RouterModule
     ]
 })
 export class HomePageComponent implements OnInit {

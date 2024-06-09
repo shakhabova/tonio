@@ -12,6 +12,8 @@ import { HelpCenterComponent } from './components/help/help-center/help-center.c
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
+import { BlogOneComponent } from './components/blog/blog-one/blog-one.component';
+import { BlogTwoComponent } from './components/blog/blog-two/blog-two.component';
 
 export const routes: Routes = [
   
@@ -27,5 +29,8 @@ export const routes: Routes = [
   { path: 'help-center', component: HelpCenterComponent, title: 'Help center'},
   { path: 'privacy-policy', component: PrivacyPolicyComponent, title: 'Privacy Policy'},
   { path: 'blog', component:BlogComponent, title: 'Blog'},
-  { path: 'terms-and-conditions', component: TermsAndConditionsComponent, title: 'Terms and Conditions'}
+  { path: 'terms-and-conditions', component: TermsAndConditionsComponent, title: 'Terms and Conditions'},
+  { path: 'blog/blog-one', component: BlogOneComponent, title: 'The Evolution of Money Transfers'},
+  { path: 'blog/blog-two', component:BlogTwoComponent, title: 'Top 5 Benefits of Using Tonio'},
+  { path: 'blog/blog-three', component:BlogTwoComponent, title: 'Understanding the Future of Open Banking and Its Impact on Money Transfers'}
 ];

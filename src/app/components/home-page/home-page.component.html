@@ -16,7 +16,7 @@
   </div>
 </div>
 <div class="tabs-wrapper">
-  <div class="tabs">
+  <!-- <div class="tabs">
     <div
       class="tab"
       [class.active]="isSendMoneyTabActive"
@@ -33,7 +33,7 @@
       Receive money
       <span class="coming-label">Coming soon</span>
     </div>
-  </div>
+  </div> -->
   <section class="tab-content" *ngIf="isSendMoneyTabActive">
     <div class="form-wrapper">
       <div class="control-wrapper">
@@ -121,7 +121,7 @@
           Sign up and create your profile for free to send money online
         </p>
         <a
-          href="https://account.remiton.global/auth/login?redirect=home"
+          href="#"
           target="blank"
           class="button purple-btn aos-init"
           data-aos="fade-up"
@@ -140,8 +140,7 @@
         <p class="custom-card-subtitle aos-init" data-aos="fade-up">
           Visit one of the Remiton’s agents’ location and send money
         </p>
-        <a
-          href="/main/location"
+        <a routerLink="/find-location" routerLinkActive="router-link-active" 
           class="button purple-btn aos-init"
           data-aos="fade-up"
           >See locations</a

@@ -1,18 +1,102 @@
-.title {
-  margin: auto;
-  max-width: 825px;
-  color: #f8f5ff;
-  font-size: 55px;
-  line-height: 60px;
-  margin-bottom: 24px;
+:host {
+  display: block;
 }
-.subtitle {
-  margin: auto;
-  max-width: 455px;
-  margin-bottom: 24px;
+
+.title {
   color: #f8f5ff;
   text-align: center;
-  font-family: "uncutMedium";
+  font-family: "Uncut Sans";
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+  margin-top: 112px;
+}
+.subtitle {
+  color: #f8f5ff;
+  text-align: center;
+  font-family: "Uncut Sans";
   font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
   line-height: 30px;
+}
+
+.card-blocks{
+  display: grid;
+  grid-template-columns: repeat(3, 327px);
+  gap: 22px;
+  justify-content: center;
+  margin: 48px 0;
+}
+.blog-card {
+  padding: 24px;
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: 0px 27px 80px 0px rgba(135, 135, 135, 0.07), 0px 6.031px 17.869px 0px rgba(135, 135, 135, 0.04), 0px 1.796px 5.32px 0px rgba(135, 135, 135, 0.03);
+  transition: .2s transform ease-in-out;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+}
+
+.blog-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-card-header img {
+  width: 279px;
+  height: 186px;
+  display: flex;
+  border-radius: 4px;
+}
+
+.blog-card-title {
+  color: #1C1C1C;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 36px; /* 150% */
+}
+
+.blog-card-subtitle {
+  color: #606060;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+
+.blog-card-date {
+  color: #606060;
+  margin-top: 5px;
+  margin-bottom: 24px;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+}
+
+.blog-card-btn {
+  display: block;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card-blocks {
+    grid-template-columns: repeat(2, 327px);
+  }
+}
+
+@media only screen and (max-width: 756px) {
+  .card-blocks {
+    grid-template-columns: 327px;
+  }
 }
