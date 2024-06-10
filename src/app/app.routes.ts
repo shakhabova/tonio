@@ -14,6 +14,10 @@ import { BlogComponent } from './components/blog/blog.component';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
 import { BlogOneComponent } from './components/blog/blog-one/blog-one.component';
 import { BlogTwoComponent } from './components/blog/blog-two/blog-two.component';
+import { BlogThreeComponent } from './components/blog/blog-three/blog-three.component';
+import { BlogFourComponent } from './components/blog/blog-four/blog-four.component';
+import { BlogFiveComponent } from './components/blog/blog-five/blog-five.component';
+import { BlogSixComponent } from './components/blog/blog-six/blog-six.component';
 
 export const routes: Routes = [
   
@@ -32,5 +36,8 @@ export const routes: Routes = [
   { path: 'terms-and-conditions', component: TermsAndConditionsComponent, title: 'Terms and Conditions'},
   { path: 'blog/blog-one', component: BlogOneComponent, title: 'The Evolution of Money Transfers'},
   { path: 'blog/blog-two', component:BlogTwoComponent, title: 'Top 5 Benefits of Using Tonio'},
-  { path: 'blog/blog-three', component:BlogTwoComponent, title: 'Understanding the Future of Open Banking and Its Impact on Money Transfers'}
+  { path: 'blog/blog-three', component:BlogThreeComponent, title: 'Understanding the Future of Open Banking and Its Impact on Money Transfers'},
+  { path: 'blog/blog-four', component: BlogFourComponent, title: 'The Impact of International Money Transfers on Global Economies'},
+  { path: 'blog/blog-five', component: BlogFiveComponent, title: 'The Role of Fintech in Making Payments Borderless'},
+  { path: 'blog/blog-six',  component: BlogSixComponent, title: 'The Future of Remittances: Trends to Watch in 2024'}
 ];
