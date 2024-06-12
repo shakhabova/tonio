@@ -41,8 +41,8 @@ export class HomePageComponent implements OnInit {
   public currentTab: Tabs = 'send-money';
 
   defaultReceiverCountry?: CountryModel;
-  defaultReceiverCurrencies: CurrencyModel[] = [{ code: 'USD', countryCode: 'USA', isDefault: true }];
-  defaultSenderCurrencies: CurrencyModel[] = [{ code: 'USD', countryCode: 'USA', isDefault: true }];
+  defaultReceiverCurrencies: CurrencyModel[] = [{ code: 'GBP', countryCode: 'GBR', isDefault: true }];
+  defaultSenderCurrencies: CurrencyModel[] = [{ code: 'GBP', countryCode: 'GBR', isDefault: true }];
   receiverCurrencies: CurrencyModel[] = this.defaultReceiverCurrencies;
   senderCurrencies: CurrencyModel[] = this.defaultSenderCurrencies;
 
@@ -67,7 +67,8 @@ export class HomePageComponent implements OnInit {
       tap(() => this.updateCurrencies$.next())
     );
 
-  defaultPaymentMethods: RemittanceTypeModel[] = [{ paymentType: 'CASH', label: 'Cash pickup' }];
+  defaultPaymentMethods: RemittanceTypeModel[] = [{ paymentType: 'CARD', label: 'Card' }];
+  accountPaymentMethod: RemittanceTypeModel = { paymentType: 'ACCOUNT', label: 'Bank Account' };
   paymentMethods = this.defaultPaymentMethods;
   paymentType = this.paymentMethods[0].paymentType;
 
@@ -76,7 +77,7 @@ export class HomePageComponent implements OnInit {
       .pipe(
         switchMap(() => forkJoin([
           this.calculatorService.getReceiverCurrencies(this.receiverCountryCode),
-          this.calculatorService.getRemittanceTypes(this.receiverCountryCode),
+          // this.calculatorService.getRemittanceTypes(this.receiverCountryCode),
         ])),
         takeUntilDestroyed(this.destoryRef),
       )
@@ -84,7 +85,13 @@ export class HomePageComponent implements OnInit {
         this.receiverCurrencies = res[0]?.length ? res[0] : this.defaultReceiverCurrencies;
         this.receiverCurrency = this.receiverCurrencies[0].code;
 
-        this.paymentMethods = res[1]?.length ? res[1] : this.defaultPaymentMethods;
+        // this.paymentMethods = res[1]?.length ? res[1] : this.defaultPaymentMethods;
+
+        if (this.receiverCountryCode === 'GBR' && this.receiverCurrency === 'GBP') {
+          this.paymentMethods = [this.accountPaymentMethod, ...this.defaultPaymentMethods];
+        } else {
+          this.paymentMethods = [...this.defaultPaymentMethods];
+        }
 
         this.updateRates$.next();
       });

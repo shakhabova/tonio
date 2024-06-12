@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable } from 'rxjs';
 
 export interface CountryModel {
   id: number;
@@ -14,7 +14,7 @@ export interface CurrencyModel {
   isDefault: boolean;
 }
 
-type PaymentTypes = 'CARD' | 'ACCOUNT' | 'CASH'
+type PaymentTypes = 'CARD' | 'ACCOUNT'
 export interface RemittanceTypeDto {
   paymentType: PaymentTypes;
 }
@@ -52,17 +52,17 @@ export class CalculatorApiService {
     return this.httpClient.get<CurrencyModel[]>(`${this.baseUrl}/dictionary/v1/country-currencies?country=${country}&isSend=true`);
   }
 
-  getRemittanceTypes(country: string): Observable<RemittanceTypeModel[]> {
-    const paymentMethodLabels: Record<PaymentTypes, string> = {
-      CARD: 'Card',
-      CASH: 'Cash pickup',
-      ACCOUNT: 'Account',
-    };
-    return this.httpClient.get<RemittanceTypeDto[]>(`${this.baseUrl}/dictionary/v1/country-remittance-types/${country}`)
-      .pipe(
-        map(dtos => dtos.map(dto => ({ ...dto, label: paymentMethodLabels[dto.paymentType] }))),
-      );
-  }
+  // getRemittanceTypes(country: string): Observable<RemittanceTypeModel[]> {
+  //   const paymentMethodLabels: Record<PaymentTypes, string> = {
+  //     CARD: 'Card',
+  //     CASH: 'Cash pickup',
+  //     ACCOUNT: 'Account',
+  //   };
+  //   return this.httpClient.get<RemittanceTypeDto[]>(`${this.baseUrl}/dictionary/v1/country-remittance-types/${country}`)
+  //     .pipe(
+  //       map(dtos => dtos.map(dto => ({ ...dto, label: paymentMethodLabels[dto.paymentType] }))),
+  //     );
+  // }
 
   getReceiverCurrencies(country: string): Observable<CurrencyModel[]> {
     return this.httpClient.get<CurrencyModel[]>(`${this.baseUrl}/dictionary/v1/country-currencies?country=${country}&isReceive=true`);

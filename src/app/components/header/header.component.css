@@ -217,6 +217,28 @@ ul {
   align-items: center;
 }
 
+.menu a {
+  position: relative;
+}
+
+.menu a:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  transition: 0.5s transform ease;
+  transform: scale3d(0, 1, 1);
+  transform-origin: 100% 50%;
+}
+
+.menu a:hover:before, .menu a.active:before{
+    transform: scale3d(1, 1, 1);
+    transform-origin: 0 50%;
+}
+
 header.open .mobile-menu {
   transition: all 0.15s ease-in-out 0.15s;
   opacity: 1;
