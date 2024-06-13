@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 export interface CountryModel {
   id: number;
@@ -65,7 +65,17 @@ export class CalculatorApiService {
   // }
 
   getReceiverCurrencies(country: string): Observable<CurrencyModel[]> {
-    return this.httpClient.get<CurrencyModel[]>(`${this.baseUrl}/dictionary/v1/country-currencies?country=${country}&isReceive=true`);
+    return this.httpClient.get<CurrencyModel[]>(`${this.baseUrl}/dictionary/v1/country-currencies?country=${country}&isReceive=true`)
+      .pipe(
+        map(currencies => {
+          const countryCurrency = currencies.find(cur => cur.countryCode === country);
+          if (countryCurrency) {
+            return [countryCurrency, ...currencies.filter(c => c.countryCode !== country)];
+          }
+
+          return currencies;
+        })
+      );
   }
 
   getCommissionAndRate(params: CommissionAndRateRequestModel): Observable<CommissionAndRateModel> {

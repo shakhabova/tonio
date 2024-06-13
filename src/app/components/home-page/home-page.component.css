@@ -349,9 +349,6 @@ app-receive-cards-block {
   .tabs {
     max-width: 100%;
   }
-  .tab-content {
-    border-radius: 0 0px 12px 12px;
-  }
 
   .custom-card-block-title {
     font-size: 24px;
