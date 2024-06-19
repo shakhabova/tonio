@@ -106,7 +106,7 @@ export class HomePageComponent implements OnInit {
               receiverCurrency: this.receiverCurrency,
               amount: +this.sendAmount,
               paymentType: this.paymentType,
-            }
+            } 
           }),
           switchMap(request => this.calculatorService.getCommissionAndRate(request).pipe(catchError(() => of(null)))),
           takeUntilDestroyed(this.destoryRef),
