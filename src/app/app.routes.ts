@@ -18,6 +18,7 @@ import { BlogThreeComponent } from './components/blog/blog-three/blog-three.comp
 import { BlogFourComponent } from './components/blog/blog-four/blog-four.component';
 import { BlogFiveComponent } from './components/blog/blog-five/blog-five.component';
 import { BlogSixComponent } from './components/blog/blog-six/blog-six.component';
+import { GoToBusinessComponent } from './components/go-to-business/go-to-business.component';
 
 export const routes: Routes = [
   
@@ -39,5 +40,6 @@ export const routes: Routes = [
   { path: 'blog/blog-three', component:BlogThreeComponent, title: 'Understanding the Future of Open Banking and Its Impact on Money Transfers'},
   { path: 'blog/blog-four', component: BlogFourComponent, title: 'The Impact of International Money Transfers on Global Economies'},
   { path: 'blog/blog-five', component: BlogFiveComponent, title: 'The Role of Fintech in Making Payments Borderless'},
-  { path: 'blog/blog-six',  component: BlogSixComponent, title: 'The Future of Remittances: Trends to Watch in 2024'}
+  { path: 'blog/blog-six',  component: BlogSixComponent, title: 'The Future of Remittances: Trends to Watch in 2024'},
+  { path: 'go-to-business', component: GoToBusinessComponent, title: 'Go to business'}
 ];

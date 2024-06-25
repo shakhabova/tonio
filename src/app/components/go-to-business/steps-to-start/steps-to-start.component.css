@@ -1,0 +1,57 @@
+:host {
+  display: block;
+  margin-top: 100px;
+}
+.steps-container {
+  text-align: center;
+}
+h3 {
+  color: #1C1C1C;
+  text-align: center;
+  font-family: "Uncut Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  margin-bottom: 64px;
+}
+.card-number {
+  font-size: 92px;
+  font-weight: bold;
+  color: #1c1c1c;
+}
+
+.custom-card-block {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.custom-card {
+  text-align: center;
+  max-width: 233px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+  text-align: left;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 109px;
+}
+
+.flag {
+  position: absolute;
+  top: 29px;
+  right: 69px;
+  width: 96px;
+}

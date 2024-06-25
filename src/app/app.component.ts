@@ -23,7 +23,8 @@ export class AppComponent implements AfterViewInit {
   private router = inject(Router);
   title = 'tonio';
   displayGlobe = signal(false);
-  urlsWithGlobe = [ 'contact-us',  'find-location', 'help', 'blog']
+  urlsWithGlobe = [ 'contact-us',  'find-location', 'help', 'blog'];
+  isBussinessPage = signal(this.checkIsBussinessPage);
 
   ngAfterViewInit(): void {
     this.router.events
@@ -39,6 +40,16 @@ export class AppComponent implements AfterViewInit {
         } else {
           this.displayGlobe.set(false);
         }
+
+        if (this.checkIsBussinessPage) {
+          this.isBussinessPage.set(true);
+        } else {
+          this.isBussinessPage.set(false);
+        }
       });
+  }
+
+  private get checkIsBussinessPage(): boolean {
+    return this.router.url.endsWith('go-to-business');
   }
 }

@@ -3,7 +3,7 @@
 <div class="absolute">
   <div class="globe-wrapper">
     <div class="bg-container clip-path">
-      <div class="bg-color"></div>
+      <div class="bg-color" [class.bussiness]="isBussinessPage()"></div>
       @if (displayGlobe()) {
       <div class="globe js-globe">
         <div class="svg-wrapper active"></div>
