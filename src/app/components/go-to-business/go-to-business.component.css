@@ -1,3 +1,7 @@
+:host{
+  display: block;
+  padding-bottom: 56px;
+}
 .title {
   color: white;
   text-align: center;

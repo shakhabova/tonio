@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, NgZone, inject, signal } from '@angular/core';
-import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { jsGlobe } from './js-globe.js';
 import { HeaderComponent } from './components/header/header.component.js';
 import { filter } from 'rxjs';
@@ -21,10 +21,12 @@ import { ScrollTopComponent } from './components/scroll-top/scroll-top.component
 })
 export class AppComponent implements AfterViewInit {
   private router = inject(Router);
+  private route = inject(ActivatedRoute);
   title = 'tonio';
   displayGlobe = signal(false);
   urlsWithGlobe = [ 'contact-us',  'find-location', 'help', 'blog'];
   isBussinessPage = signal(this.checkIsBussinessPage);
+  forIframe = signal(false);
 
   ngAfterViewInit(): void {
     this.router.events
@@ -32,7 +34,7 @@ export class AppComponent implements AfterViewInit {
         filter(ev => ev instanceof NavigationEnd)
       )
       .subscribe(() => {
-        if (this.router.url === '/' || this.urlsWithGlobe.some(url => this.router.url.endsWith(url))) {
+        if (this.router.url === '/' || this.urlsWithGlobe.some(url => this.router.isActive(url, { queryParams: 'ignored', fragment: 'ignored', matrixParams: 'ignored', paths: 'exact' }))) {
           if (!this.displayGlobe()) {
             requestAnimationFrame(() => jsGlobe());
           }
@@ -47,6 +49,14 @@ export class AppComponent implements AfterViewInit {
           this.isBussinessPage.set(false);
         }
       });
+
+      this.route.queryParamMap.subscribe(queryParams => {
+        if (queryParams.has('forIframe')) {
+          this.forIframe.set(true);
+        } else {
+          this.forIframe.set(false);
+        }
+      })
   }
 
   private get checkIsBussinessPage(): boolean {

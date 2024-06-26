@@ -6,6 +6,8 @@ export interface CountryModel {
   id: number;
   name: string;
   code: string;
+  isSepaSupported: boolean;
+  isCard: boolean;
 }
 
 export interface CurrencyModel {
@@ -45,7 +47,7 @@ export class CalculatorApiService {
   constructor(private httpClient: HttpClient) { }
   
   getReceiverCountries(): Observable<CountryModel[]> {
-    return this.httpClient.get<CountryModel[]>(`${this.baseUrl}/dictionary/v1/countries?isReceive=true`);
+    return this.httpClient.get<CountryModel[]>(`${this.baseUrl}/dictionary/v1/countries?isReceive=true`, { headers: { 'app-name': 'Tonio' } });
   }
 
   getSenderCurrencies(country: string): Observable<CurrencyModel[]> {

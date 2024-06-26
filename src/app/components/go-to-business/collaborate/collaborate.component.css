@@ -1,0 +1,60 @@
+:host{
+display: block;
+  padding: 48px 0;
+  background: #F2F4F9;
+}
+
+p {
+  margin: 0;
+}
+
+
+.title {
+  color: #1C1C1C;
+  text-align: center;
+  font-family: "Uncut Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px; 
+  width: 775px;
+  margin: 0 auto;/* 120% */
+}
+
+.custum-card-title{
+  color: #1C1C1C;
+font-family: "Uncut Sans";
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: 33px; /* 150% */
+}
+
+.benefir-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 93px;
+  justify-content: center;
+}
+
+.benefir {
+  width: 300px;
+}
+
+.custom-card-block {
+  display: grid;
+  grid-template-columns: 381px 381px;
+  column-gap: 34px;
+  row-gap: 14px;
+  justify-content: center;
+  padding-top: 35px;
+}
+
+.custom-card {
+  padding: 16px;
+  border: none;
+  display: flex;
+  flex-direction:column;
+  max-width: 381px;
+  width: 100%;
+}

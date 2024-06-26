@@ -1,4 +1,6 @@
-<app-header></app-header>
+@if(!forIframe()) {
+  <app-header></app-header>
+}
 
 <div class="absolute">
   <div class="globe-wrapper">
@@ -15,5 +17,7 @@
 </div>
 
 <router-outlet></router-outlet>
-<app-footer></app-footer>
-<app-scroll-top></app-scroll-top>
+@if (!forIframe()) {
+  <app-footer></app-footer>
+  <app-scroll-top></app-scroll-top>
+}

@@ -61,15 +61,17 @@ export class HomePageComponent implements OnInit {
   commissionAmount = 0;
   totalAmount = 1;
 
+  private allCountries: CountryModel[] = [];
   receiverCountries$: Observable<CountryModel[]> = this.calculatorService.getReceiverCountries()
     .pipe(
+      tap(countries => this.allCountries = countries),
       tap(countries => this.defaultReceiverCountry = countries[0]),
       tap(() => this.updateCurrencies$.next())
     );
 
-  defaultPaymentMethods: RemittanceTypeModel[] = [{ paymentType: 'CARD', label: 'Card' }];
   accountPaymentMethod: RemittanceTypeModel = { paymentType: 'ACCOUNT', label: 'Bank Account' };
-  paymentMethods = this.defaultPaymentMethods;
+  cardPaymentMethod: RemittanceTypeModel = { paymentType: 'CARD', label: 'Card' };
+  paymentMethods = [this.cardPaymentMethod];
   paymentType = this.paymentMethods[0].paymentType;
 
   ngOnInit(): void {
@@ -85,12 +87,13 @@ export class HomePageComponent implements OnInit {
         this.receiverCurrencies = res[0]?.length ? res[0] : this.defaultReceiverCurrencies;
         this.receiverCurrency = this.receiverCurrencies[0].code;
 
-        // this.paymentMethods = res[1]?.length ? res[1] : this.defaultPaymentMethods;
-
-        if (this.receiverCountryCode === 'GBR' && this.receiverCurrency === 'GBP') {
-          this.paymentMethods = [this.accountPaymentMethod, ...this.defaultPaymentMethods];
-        } else {
-          this.paymentMethods = [...this.defaultPaymentMethods];
+        this.paymentMethods = [];
+        if (this.displayAccountPaymentMethod()) {
+          this.paymentMethods.push(this.accountPaymentMethod);
+        }
+        const country = this.allCountries.find(c => c.code === this.receiverCountryCode);
+        if (country?.isCard) {
+          this.paymentMethods.push(this.cardPaymentMethod);
         }
 
         this.updateRates$.next();
@@ -146,5 +149,18 @@ export class HomePageComponent implements OnInit {
 
   public onReceiveMoneyTab(): void {
     this.currentTab = 'receive-money';
+  }
+
+  private displayAccountPaymentMethod(): boolean {
+    if (this.receiverCountryCode === 'GBR' && this.receiverCurrency === 'GBP') {
+      return true;
+    }
+
+    const country = this.allCountries.find(c => c.code === this.receiverCountryCode);
+    if (country?.isSepaSupported && this.receiverCurrency === 'EUR') {
+      return true;
+    }
+
+    return false;
   }
 }
