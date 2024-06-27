@@ -12,7 +12,8 @@
 .subtitle {
   color: #606060;
   text-align: center;
-  width: 421px;
+  max-width: 421px;
+  width: 100%;
   font-family: "Uncut Sans";
   font-size: 18px;
   font-style: normal;
@@ -23,7 +24,7 @@
   /* 150% */
 }
 
-#contact-form {
+.contact-form-wrapper {
   max-width: 848px;
   width: 100%;
   margin: auto;
@@ -83,4 +84,35 @@ textarea {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+}
+
+:host ::ng-deep .ng-select.ng-select-single .ng-select-container {
+  height: 45px !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 46px;
+    line-height: 52px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .subtitle {
+    max-width: 344px;
+  }
+
+  .contact-form-wrapper {
+    padding: 34px 25px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
 }

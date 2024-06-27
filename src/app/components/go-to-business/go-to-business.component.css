@@ -50,3 +50,18 @@
 a {
   text-decoration: none;
 }
+
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 46px;
+    line-height: 52px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+}

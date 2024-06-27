@@ -1,47 +1,46 @@
 <h1 class="title">Colaborate with us!</h1>
-<h2 class="subtitle">If you would like to work with Tonio, please use the form below, and we’ll quickly get back to you </h2>
+<h2 class="subtitle">
+  If you would like to work with Tonio, please use the form below, and we’ll
+  quickly get back to you
+</h2>
 <div class="container">
-  <section id="contact-form">
+  <section class="contact-form-wrapper">
     <div class="contact-form">
       <div class="form-row">
-      <div class="contact-form-control">
-        <label>Name </label>
-        <input
-          type="text"
-          name="name"
-          value=""
-          placeholder="Name"
-        />
-      </div>
-      <div class="contact-form-control">
-        <label>Surname </label>
-        <input
-          type="text"
-          name="name"
-          value=""
-          placeholder="Surname"
-        />
-      </div>
+        <div class="contact-form-control">
+          <label>Name </label>
+          <input type="text" name="name" value="" placeholder="Name" />
+        </div>
+        <div class="contact-form-control">
+          <label>Surname </label>
+          <input type="text" name="name" value="" placeholder="Surname" />
+        </div>
       </div>
       <div class="form-row">
-      <div class="contact-form-control">
-        <label>Company </label>
-        <input
-          type="text"
-          name="name"
-          value=""
-          placeholder="Company"
-        />
-      </div>
-      <div class="contact-form-control">
-        <label>Country </label>
-        <input
-          type="text"
-          name="name"
-          value=""
-          placeholder="Country"
-        />
-      </div>
+        <div class="contact-form-control">
+          <label>Company </label>
+          <input type="text" name="name" value="" placeholder="Company" />
+        </div>
+        <div class="contact-form-control">
+          <label>Country </label>
+          <ng-select
+            [items]="countries"
+            [(ngModel)]="currentCountry"
+            [clearable]="false"
+            [searchable]="false"
+          >
+            <ng-template ng-label-tmp let-item="item">
+              <div class="select-item">
+                {{ item }}
+              </div>
+            </ng-template>
+            <ng-template ng-option-tmp let-item="item">
+              <div class="select-item">
+                {{ item }}
+              </div>
+            </ng-template>
+          </ng-select>
+        </div>
       </div>
       <div class="form-row">
         <div class="contact-form-control">
@@ -57,7 +56,6 @@
             placeholder="Enter phone number"
             id="telephone2"
             autocomplete="off"
-            
           />
         </div>
       </div>
@@ -76,4 +74,3 @@
     </div>
   </section>
 </div>
-

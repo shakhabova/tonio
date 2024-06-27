@@ -48,10 +48,56 @@ p {
   top: 48px;
   width: 109px;
 }
+.custom-card:nth-child(2n) .arrow {
+  transform: rotateX(180deg);
+}
 
 .flag {
   position: absolute;
   top: 29px;
   right: 69px;
   width: 96px;
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 46px;
+    line-height: 52px;
+    margin-bottom: 19px;
+  }
+
+  .custom-card-block {
+    flex-direction: column;
+    margin: 0 45px;
+  }
+
+  .custom-card {
+    width: 100%;
+    max-width: unset;
+  }
+
+  .arrow {
+    right: unset;
+    top: unset;
+    transform: rotate(90deg);
+    width: 73px;
+    bottom: -46px;
+    left: 76px;
+  }
+
+  .flag {
+    right: unset;
+    left: 72px;
+  }
+
+  .custom-card:nth-child(2n) .arrow {
+    transform: rotateY(180deg) rotate(90deg);
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .title {
+    font-size: 26px;
+    line-height: 36px;
+  }
 }

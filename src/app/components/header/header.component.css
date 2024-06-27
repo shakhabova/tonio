@@ -300,6 +300,17 @@ border: 1px solid #FFF;
 background-color: transparent;
 }
 
+.button-block{
+  display: flex;
+  padding-left: 15px;
+}
+ .mobile-go-to-business{
+  border-radius: 8px;
+border: 1px solid #FFF;
+background-color: transparent;
+
+}
+
 ::ng-deep body:has(header.open) {
   overflow: hidden;
 }

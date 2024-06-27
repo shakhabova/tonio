@@ -6,28 +6,19 @@
     <nav class="header-nav">
       <ul class="menu">
         <li>
-          <a
-            routerLink="/track-transfer"
-            routerLinkActive="active"
-            class=""
+          <a routerLink="/track-transfer" routerLinkActive="active" class=""
             >Track a transfer</a
           >
         </li>
         <li><a routerLink="/find-location" class="">Find a Location</a></li>
         <li><a routerLink="/help" routerLinkActive="active">Help</a></li>
         <li>
-          <a
-            routerLink="/contact-us"
-            routerLinkActive="active"
-            class=""
+          <a routerLink="/contact-us" routerLinkActive="active" class=""
             >Contact us</a
           >
         </li>
         <li>
-          <a
-            routerLink="/about-us"
-            routerLinkActive="active"
-            class=""
+          <a routerLink="/about-us" routerLinkActive="active" class=""
             >About Us</a
           >
         </li>
@@ -35,17 +26,19 @@
     </nav>
     <div class="header-btns">
       <a
-        routerLink="go-to-business" routerLinkActive="router-link-active"
+        routerLink="go-to-business"
+        routerLinkActive="router-link-active"
         class="button business-btn"
-        >
+      >
         Go to business
-        <img width="16" src="assets/icons/arrow-right.png">
+        <img width="16" src="assets/icons/arrow-right.png" />
       </a>
       <a
         href="https://account.tonio.world/home"
         target="_blank"
         class="button login-btn"
-        >Sign in/Sign up</a>
+        >Sign in/Sign up</a
+      >
     </div>
     <div class="nav-btn" (click)="mobileMenuOpened.set(!mobileMenuOpened())">
       <div class="btn-bar menu-btn"></div>
@@ -58,116 +51,183 @@
   <!-- Mobile menu Start -->
   <div class="mobile-menu">
     <div class="mobile-menu-container">
-        <div>
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseOne"
-                  >
-                    Help
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseOne"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body">
-                    <ul class="sub-mobile-menu">
-                      <li><a routerLink="/help" routerLinkActive="router-link-active">Help Center</a></li>
-                      <li><a routerLink="/help-center" routerLinkActive="router-link-active" >FAQ</a></li>
-                      <li><a routerLink="/help/cash-pickup" routerLinkActive="router-link-active">Cash pickup</a></li>
-                      <li><a routerLink="/help/bank-transfer" routerLinkActive="router-link-active">Bank transfer</a></li>
-                      <li><a routerLink="/help/credit-card" routerLinkActive="router-link-active">Credit/Debit card</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseTwo"
-                  >
-                    Company
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseTwo"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body">
-                    <ul class="sub-mobile-menu">
-                      <li><a routerLink="/about-us" routerLinkActive="router-link-active">About</a></li>
-                      <li><a routerLink="/contact-us" routerLinkActive="router-link-active">Contact us</a></li>
-                      <li><a routerLink="/blog" routerLinkActive="router-link-active">News/Blog</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseThree"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseThree"
-                  >
-                    Legal
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseThree"
-                  class="accordion-collapse collapse"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div class="accordion-body">
-                    <ul class="sub-mobile-menu">
-                      <li><a routerLink="/terms-and-conditions" routerLinkActive="router-link-active">Terms of Service</a></li>
-                      <li><a routerLink="/privacy-policy" routerLinkActive="router-link-active">Privacy policy</a></li>
-                      
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-      
-            <div class="mobile-menu-block icons-menu-block">
-              <a routerLink="/track-transfer" class="mobile-menu-icon-link">
-                <span class="mobile-menu-icon">
-                  <img src="assets/icons/track-icon.png" alt="search" />
-                </span>
-                <span class="mobile-menu-icon-text">Track a transfer</span>
-              </a>
-              <a routerLink="/find-location" class="mobile-menu-icon-link">
-                <div class="mobile-menu-icon">
-                  <img src="assets/icons/find-icon.png" alt="map pin" />
-                </div>
-                <span class="mobile-menu-icon-text">Find location</span>
-              </a>
-            </div>
-            <a
-              href="https://account.tonio.world/home"
-              target="_blank"
-              class="button mobile-login-btn"
-              >Sign in/Sign up</a
+      <div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                Help
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
             >
+              <div class="accordion-body">
+                <ul class="sub-mobile-menu">
+                  <li>
+                    <a routerLink="/help" routerLinkActive="router-link-active"
+                      >Help Center</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      routerLink="/help-center"
+                      routerLinkActive="router-link-active"
+                      >FAQ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      routerLink="/help/cash-pickup"
+                      routerLinkActive="router-link-active"
+                      >Cash pickup</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      routerLink="/help/bank-transfer"
+                      routerLinkActive="router-link-active"
+                      >Bank transfer</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      routerLink="/help/credit-card"
+                      routerLinkActive="router-link-active"
+                      >Credit/Debit card</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                Company
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="sub-mobile-menu">
+                  <li>
+                    <a
+                      routerLink="/about-us"
+                      routerLinkActive="router-link-active"
+                      >About</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      routerLink="/contact-us"
+                      routerLinkActive="router-link-active"
+                      >Contact us</a
+                    >
+                  </li>
+                  <li>
+                    <a routerLink="/blog" routerLinkActive="router-link-active"
+                      >News/Blog</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                Legal
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                <ul class="sub-mobile-menu">
+                  <li>
+                    <a
+                      routerLink="/terms-and-conditions"
+                      routerLinkActive="router-link-active"
+                      >Terms of Service</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      routerLink="/privacy-policy"
+                      routerLinkActive="router-link-active"
+                      >Privacy policy</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <div class="mobile-menu-block icons-menu-block">
+          <a routerLink="/track-transfer" class="mobile-menu-icon-link">
+            <span class="mobile-menu-icon">
+              <img src="assets/icons/track-icon.png" alt="search" />
+            </span>
+            <span class="mobile-menu-icon-text">Track a transfer</span>
+          </a>
+          <a routerLink="/find-location" class="mobile-menu-icon-link">
+            <div class="mobile-menu-icon">
+              <img src="assets/icons/find-icon.png" alt="map pin" />
+            </div>
+            <span class="mobile-menu-icon-text">Find location</span>
+          </a>
+        </div>
+        <div class="button-block">
+          <a
+            routerLink="go-to-business"
+            routerLinkActive="router-link-active"
+            class="button mobile-go-to-business"
+            >
+            Go to business
+            <img width="16" src="assets/icons/arrow-right.png" />
+          </a>
+          <a
+            href="https://account.tonio.world/home"
+            target="_blank"
+            class="button mobile-login-btn"
+            >Sign in/Sign up</a
+          >
+        </div>
+      </div>
       <div class="social-links">
-        <a href="https://www.facebook.com/people/Tonio/100088100730315/" target="_blank"
+        <a
+          href="https://www.facebook.com/people/Tonio/100088100730315/"
+          target="_blank"
           ><img src="assets/icons/Facebook.svg" alt="facebook"
         /></a>
         <a href="https://www.instagram.com/tonio_co_uk" target="_blank"
