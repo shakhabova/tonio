@@ -17,7 +17,7 @@ export class CollaborateComponent {
   cards: CollaborateCardModel[] = [
     {
       title: 'Global coverage',
-      subtitle: 'Access to international (SEPA, SWIFT) and domestic payment systems',
+      subtitle: 'Access to international (SEPA, Interac, ACH and Global Local Payout options) and domestic payment systems',
       imgSrc: 'assets/images/benefir.webp',
     },
     {

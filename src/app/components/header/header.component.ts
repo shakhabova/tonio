@@ -16,12 +16,16 @@ export class HeaderComponent {
   private router = inject(Router);
 
   mobileMenuOpened = signal(false);
+  isOnBusiness = signal(false);
+
 
   public ngOnInit(): void {
     this.router.events
       .subscribe(event => {
         if (event instanceof NavigationEnd) {
           this.mobileMenuOpened.set(false);
+          const isOnBusiness = this.router.isActive('go-to-business', {fragment: 'ignored', queryParams: 'ignored', matrixParams: 'ignored', paths: 'exact'});
+          this.isOnBusiness.set(isOnBusiness);
         }
       });
   }
