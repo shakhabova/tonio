@@ -220,14 +220,26 @@
           </a>
         </div>
         <div class="button-block">
-          <a
-            routerLink="go-to-business"
-            routerLinkActive="router-link-active"
-            class="button mobile-go-to-business"
-          >
-            Go to business
-            <img width="16" src="assets/icons/arrow-right.png" />
-          </a>
+          @if (!isOnBusiness()){
+            <a
+              routerLink="go-to-business"
+              routerLinkActive="router-link-active"
+              class="button mobile-go-to-business"
+            >
+              Go to business
+              <img width="16" src="assets/icons/arrow-right.png" />
+            </a>
+            } @else{
+            <a
+              routerLink="/"
+              routerLinkActive="router-link-active"
+              class="button mobile-go-to-business"
+            >
+              Go to individual
+              <img width="16" src="assets/icons/arrow-right.png" />
+            </a>
+      
+            }
           <a
             href="https://account.tonio.world/home"
             target="_blank"
