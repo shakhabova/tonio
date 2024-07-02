@@ -78,7 +78,7 @@ export class HomePageComponent implements OnInit {
     this.updateCurrencies$
       .pipe(
         switchMap(() => forkJoin([
-          this.calculatorService.getReceiverCurrencies(this.receiverCountryCode),
+          this.calculatorService.getReceiverCurrencies(this.receiverCountryCode).pipe(catchError(() => of(null))),
           // this.calculatorService.getRemittanceTypes(this.receiverCountryCode),
         ])),
         takeUntilDestroyed(this.destoryRef),
