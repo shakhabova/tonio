@@ -40,7 +40,7 @@ export class HomePageComponent implements OnInit {
   private destoryRef = inject(DestroyRef);
   public currentTab: Tabs = 'send-money';
 
-  defaultReceiverCountry?: CountryModel;
+  // defaultReceiverCountry?: CountryModel;
   defaultReceiverCurrencies: CurrencyModel[] = [{ code: 'GBP', countryCode: 'GBR', isDefault: true }];
   defaultSenderCurrencies: CurrencyModel[] = [{ code: 'GBP', countryCode: 'GBR', isDefault: true }];
   receiverCurrencies: CurrencyModel[] = this.defaultReceiverCurrencies;
@@ -52,7 +52,7 @@ export class HomePageComponent implements OnInit {
   receiveAmount: string = '1';
   receiverCurrency = this.receiverCurrencies[0].code;
 
-  receiverCountryCode: string = 'EGY';
+  receiverCountryCode: string = 'CAN';
 
   updateCurrencies$ = new Subject<void>();
   updateRates$ = new Subject<void>();
@@ -65,7 +65,7 @@ export class HomePageComponent implements OnInit {
   receiverCountries$: Observable<CountryModel[]> = this.calculatorService.getReceiverCountries()
     .pipe(
       tap(countries => this.allCountries = countries),
-      tap(countries => this.defaultReceiverCountry = countries[0]),
+      // tap(countries => this.defaultReceiverCountry = countries[0]),
       tap(() => this.updateCurrencies$.next())
     );
 

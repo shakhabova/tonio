@@ -130,3 +130,13 @@ footer .copyright .container {
     align-self: center;
   }
 }
+
+@media only screen and (max-width: 757px) {
+  .copyright-text {
+    font-size: 14px;
+  }
+
+  .copyright-text-break {
+    display: none;
+  }
+}
