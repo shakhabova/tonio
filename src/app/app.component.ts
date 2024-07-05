@@ -6,6 +6,7 @@ import { filter } from 'rxjs';
 import { FooterComponent } from "./components/footer/footer.component";
 import { WindowScrolledService } from './services/window-scrolled.service.js';
 import { ScrollTopComponent } from './components/scroll-top/scroll-top.component.js';
+import { ToastComponent } from "./components/toast/toast.component";
 
 @Component({
     selector: 'app-root',
@@ -17,6 +18,7 @@ import { ScrollTopComponent } from './components/scroll-top/scroll-top.component
         HeaderComponent,
         FooterComponent,
         ScrollTopComponent,
+        ToastComponent
     ]
 })
 export class AppComponent implements AfterViewInit {

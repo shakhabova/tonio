@@ -9,23 +9,23 @@
       <div class="form-row">
         <div class="contact-form-control">
           <label>Name </label>
-          <input type="text" name="name" value="" placeholder="Name" />
+          <input type="text" name="name" [(ngModel)]="name" placeholder="Name" />
         </div>
         <div class="contact-form-control">
           <label>Surname </label>
-          <input type="text" name="name" value="" placeholder="Surname" />
+          <input type="text" name="name" [(ngModel)]="surname" placeholder="Surname" />
         </div>
       </div>
       <div class="form-row">
         <div class="contact-form-control">
           <label>Company </label>
-          <input type="text" name="name" value="" placeholder="Company" />
+          <input type="text" name="name" [(ngModel)]="company" placeholder="Company" />
         </div>
         <div class="contact-form-control">
           <label>Country </label>
           <ng-select
             [items]="countries"
-            [(ngModel)]="currentCountry"
+            [(ngModel)]="country"
             [clearable]="false"
             [searchable]="false"
           >
@@ -45,14 +45,14 @@
       <div class="form-row">
         <div class="contact-form-control">
           <label>Email</label>
-          <input type="email" name="email" value="" placeholder="Email" />
+          <input type="email" name="email" [(ngModel)]="email" placeholder="Email" />
         </div>
         <div class="contact-form-control">
           <label>Contact number</label>
           <input
             type="tel"
             name="phone"
-            value=""
+            [(ngModel)]="phone"
             placeholder="Enter phone number"
             id="telephone2"
             autocomplete="off"
@@ -64,13 +64,34 @@
         <textarea
           name="message"
           rows="4"
+          [(ngModel)]="message"
           placeholder="Share your ideas and opinion"
         ></textarea>
       </div>
 
       <div class="contact-form-control btn-block">
-        <button class="button yellow-btn">Send message</button>
+        <button class="button yellow-btn" (click)="onSend()">Send message</button>
       </div>
     </div>
   </section>
+</div>
+
+<div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
+  <div id="successToast" class="toast align-items-center bg-warning border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Your message was sent successfully!
+      </div>
+      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+
+  <div id="errorToast" class="toast align-items-center bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Error occurred while sending your message
+      </div>
+      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
 </div>
