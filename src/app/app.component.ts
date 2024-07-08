@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, NgZone, inject, signal } from '@angular/core';
+import { AfterViewInit, Component, NgZone, effect, inject, signal } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { jsGlobe } from './js-globe.js';
 import { HeaderComponent } from './components/header/header.component.js';
@@ -30,6 +30,12 @@ export class AppComponent implements AfterViewInit {
   isBussinessPage = signal(this.checkIsBussinessPage);
   forIframe = signal(false);
 
+  constructor() {
+    effect(() => {
+      this.forIframe() ? document.body.classList.add('for-iframe') : document.body.classList.remove('for-iframe');
+    });
+  }
+
   ngAfterViewInit(): void {
     this.router.events
       .pipe(
@@ -58,7 +64,7 @@ export class AppComponent implements AfterViewInit {
         } else {
           this.forIframe.set(false);
         }
-      })
+      });
   }
 
   private get checkIsBussinessPage(): boolean {

@@ -5,6 +5,10 @@
   margin-top: 44px;
 }
 
+body.for-iframe :host {
+  margin-top: 0;
+}
+
 .head {
   color: #1c1c1c;
 
