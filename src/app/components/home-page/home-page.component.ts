@@ -13,6 +13,7 @@ import { CalculatorApiService, CommissionAndRateRequestModel, CountryModel, Curr
 import { Observable, Subject, catchError, forkJoin, map, of, switchMap, tap } from 'rxjs';
 import { FindLocationComponent } from '../find-location/find-location.component';
 import { RouterModule } from '@angular/router';
+import { SignInWaysComponent } from './sign-in-ways/sign-in-ways.component';
 
 type Tabs = 'send-money' | 'receive-money';
 
@@ -32,7 +33,8 @@ type Tabs = 'send-money' | 'receive-money';
         SelectComponent,
         InputWithSelectComponent,
         FindLocationComponent,
-        RouterModule
+        RouterModule,
+        SignInWaysComponent
     ]
 })
 export class HomePageComponent implements OnInit {

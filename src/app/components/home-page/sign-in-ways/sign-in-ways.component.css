@@ -1,0 +1,88 @@
+:host {
+ margin-top: 114px;
+ display: block;
+}
+
+.custom-card-block {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.custom-card {
+  position: relative;
+  margin-bottom: 32px;
+  width: 608px;
+  height: 597px;
+  border-radius: 16px;
+}
+
+.card-1 {
+  background-color: #FDCC06;
+
+}
+
+.card-2 {
+  background-color: rgb(60, 60, 60);
+}
+
+.custom-card-body {
+  width:100%;
+  border-radius: 0px 0px 16px 16px;
+  padding: 24px;
+}
+
+.custom-card-title {
+  color: #1c1c1c;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 33px; /* 150% */
+}
+
+.custom-card-subtitle {
+  color: #606060;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px; /* 150% */
+}
+.custom-card-header img {
+  width: 608px;
+  height: 359px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  object-fit: cover;
+  object-position: top;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  z-index: 10;
+  position: relative;
+}
+
+.button-1 {
+  background-color: #1c1c1c;
+  color: #FDCC06;
+}
+
+.custom-card-overlay-1 {
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/images/signIn.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  mask-image: linear-gradient(0deg, rgba(217, 217, 217, 0) 35.7%, #737373 74.53%);
+}
+
+.custom-card-overlay-2 {
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/images/SeeLocations.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  mask-image: linear-gradient(0deg, rgba(217, 217, 217, 0) 35.7%, #737373 74.53%);
+}

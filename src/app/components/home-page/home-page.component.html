@@ -105,11 +105,12 @@
     <app-receive-money [isRow]="true"></app-receive-money>
   </section>
 </div>
-
+<app-sign-in-ways></app-sign-in-ways>
 <div class="container">
   <h2 class="custom-card-block-title aos-init aos-animate" data-aos="fade-up">
     Ways to send money internationally
   </h2>
+ 
   <div class="custom-card-block">
     <div class="custom-card">
       <div class="custom-card-header aos-init aos-animate" data-aos="fade-up">
@@ -140,7 +141,7 @@
         <p class="custom-card-subtitle aos-init" data-aos="fade-up">
           Visit one of the Tonio’s agents’ location and send money
         </p>
-        <a routerLink="/find-location" routerLinkActive="router-link-active" 
+        <a routerLink="/see-locations" routerLinkActive="router-link-active" 
           class="button purple-btn aos-init"
           data-aos="fade-up"
           >See locations</a
@@ -149,6 +150,7 @@
     </div>
   </div>
 </div>
+
 <app-receive-cards-block></app-receive-cards-block>
 <app-ways-to-pay></app-ways-to-pay>
 <app-sign-up></app-sign-up>

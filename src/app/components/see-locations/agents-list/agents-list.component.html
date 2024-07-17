@@ -1,0 +1,57 @@
+<section class="agents">
+  <h1 class="cards-title">Agent`s list</h1>
+
+  <div class="search-input">
+    <img src="assets/icons/search.svg">
+    <input placeholder="Search" (keyup.enter)="onSearch($event)" />
+  </div>
+
+  <div class="cards-block">
+    @for (agent of filteredAgents(); track agent.name) {
+      <div class="agents-card">
+        <div class="agents-card-title">{{ agent.name }}</div>
+        <div class="card-info-block">
+          <img src="assets/icons/map-pin.svg" alt="" class="info-icon">
+          <div class="info-wrapper">
+            <div class="info-label">Address</div>
+            <div>{{ agent.address }}</div>
+          </div>
+        </div>
+        <div class="card-info-block">
+          <img
+            src="assets/icons/tel.svg"
+            alt="Telephone svg icon"
+            class="info-icon"
+          />
+          <div class="info-wrapper">
+            <div class="info-label">Phone</div>
+            <div>{{ agent.phone }}</div>
+          </div>
+        </div>
+        <div class="card-info-block">
+          <img
+            src="assets/icons/email.svg"
+            alt="email svg icon"
+            class="info-icon"
+          />
+          <div class="info-wrapper">
+            <div class="info-label">Email</div>
+            <div>{{ agent.email }}</div>
+          </div>
+        </div>
+
+        <div class="card-info-block">
+          <img
+            src="assets/icons/clock.svg"
+            alt="email svg icon"
+            class="info-icon"
+          />
+          <div class="info-wrapper">
+            <div class="info-label">Work hours</div>
+            <div>{{ agent.workHours }}</div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

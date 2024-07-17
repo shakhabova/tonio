@@ -60,13 +60,13 @@
   height: 167px;
   flex-shrink: 0;
   border-radius: 0px 0px 16px 16px;
-  background: rgba(234, 246, 249, 0.8);
+background: var(--Tonio-Main500, #1C1C1C);
   backdrop-filter: blur(10px);
   padding: 24px;
 }
 
 .custom-card-title {
-  color: #1C1C1C;
+  color: #FFF;
 
 font-size: 22px;
 font-style: normal;
@@ -76,7 +76,7 @@ margin: 0;
 }
 
 .custom-card-subtitle {
-  color: #606060;
+  color: #FFF;
 font-size: 18px;
 font-style: normal;
 font-weight: 500;

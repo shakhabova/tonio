@@ -1,0 +1,144 @@
+:host {
+  padding-top: 80px;
+  display: block;
+  background: #F2F4F9;
+}
+
+h1 {
+  text-align: center;
+  color: var(--Tonio-Main500, #1C1C1C);
+
+  text-align: center;
+  font-family: "Uncut Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.agents {
+  padding-bottom: 76px;
+}
+
+.search-input {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 320px;
+  height: 48px;
+  padding: 10px 14px;
+  gap: 8px;
+
+  border-radius: 8px;
+  border: 1px solid #D0D5DD;
+  background: #FFF;
+
+  /* card shadow */
+  box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px rgba(101, 101, 101, 0.04);
+
+  margin-top: 32px;
+  margin-bottom: 51px;
+}
+
+.search-input input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+}
+
+.agents-card {
+  width: 330px;
+  padding: 31px 33px;
+  padding-bottom: 19px;
+
+  border-radius: 8px;
+  background: #FFF;
+  
+  /* card shadow */
+  box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08), 0px 1.878px 7.889px 0px rgba(101, 101, 101, 0.04);
+}
+
+.cards-block {
+  display: grid;
+  gap: 19px;
+  justify-content: center;
+  grid-template-columns: repeat(4, 330px);
+}
+
+.agents-card-title {
+  color: #1c1c1c;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 8px;
+}
+
+.agents-card-subtitle {
+  color: #606060;
+
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+
+.agents-card-contact {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.contact-info {
+  color: #606060;
+ 
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.card-info-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px; 
+}
+
+.card-info-block + .card-info-block {
+  margin-top: 16px;
+}
+
+.info-icon {
+  margin-top: 5px;
+}
+
+.info-label {
+  color: #5D6677;
+}
+
+@media only screen and (max-width: 1440px) {
+  .cards-block {
+    grid-template-columns: repeat(3, 330px);
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .cards-block {
+    grid-template-columns: repeat(2, 330px);
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .cards-block {
+    grid-template-columns: 330px;
+  }
+}

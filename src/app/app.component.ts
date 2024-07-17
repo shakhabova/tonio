@@ -68,6 +68,6 @@ export class AppComponent implements AfterViewInit {
   }
 
   private get checkIsBussinessPage(): boolean {
-    return this.router.url.endsWith('go-to-business');
+    return ['go-to-business', 'see-locations'].some(location => this.router.isActive(location, { queryParams: 'ignored', fragment: 'ignored', matrixParams: 'ignored', paths: 'exact' }))
   }
 }

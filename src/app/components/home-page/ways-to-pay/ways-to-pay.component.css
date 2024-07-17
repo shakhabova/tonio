@@ -46,6 +46,7 @@
 
 .custom-card-header {
   display: flex;
+  
 }
 
 .custom-card-header img {
@@ -65,7 +66,8 @@
 
 .custom-card-title {
   color: #1c1c1c;
-
+  display: flex;
+  align-items: center;
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
@@ -80,9 +82,21 @@
   font-weight: 500;
   line-height: 27px; /* 150% */
 }
-
+.live-label {
+  color: #fff;
+  font-size: 13px;
+  margin-left: 10px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 600;
+  padding: 3px 10px;
+  line-height: 21px;
+  border-radius: 34px;
+  background: green;
+}
 .label {
   color: #fff;
+  margin-left: 10px;
   font-size: 13px;
   display: inline-block;
   font-style: normal;
