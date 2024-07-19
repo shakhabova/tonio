@@ -44,7 +44,9 @@ li {
 }
 
 .footer-right-block {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 43px;
   max-width: 235px;
   width: 100%;
   justify-content: space-between;
@@ -79,7 +81,7 @@ li {
 }
 
 .copyright-text {
-  margin: 0;
+  display: block;
 }
 .business-btn {
   margin-top: 49px;
@@ -90,7 +92,7 @@ li {
   color: #1c1c1c;
 }
 
-footer .copyright .container {
+footer .copyright-top {
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -3,7 +3,7 @@
   padding-bottom: 56px;
 }
 .title {
-  color: white;
+  color: #1c1c1c;
   text-align: center;
   font-family: "Uncut Sans";
   font-size: 55px;
@@ -18,7 +18,7 @@
 }
 
 .subtitle {
-  color: #f8f5ff;
+  color: #424141;
   text-align: center;
   font-family: "Uncut Sans";
   font-size: 20px;
@@ -41,7 +41,8 @@
   align-items: flex-start;
   gap: 8px;
   border-radius: 8px;
-  background: #fdcc06;
+  background: #1c1c1c;
+  color: #fdcc06;
 
   /* card shadow */
   box-shadow: 0px 15px 63px 0px rgba(101, 101, 101, 0.08),

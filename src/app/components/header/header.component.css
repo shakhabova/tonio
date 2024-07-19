@@ -38,6 +38,14 @@ a {
   text-decoration: none;
 }
 
+.black-text a {
+  color: var(--Tonio-Main500, #1C1C1C);
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
 header {
   flex-grow: 1;
 }
@@ -300,6 +308,10 @@ border: 1px solid #FFF;
 background-color: transparent;
 }
 
+.black-text .business-btn {
+  border-color: #1c1c1c;
+}
+
 .button-block{
   display: flex;
   padding-left: 15px;
@@ -313,6 +325,11 @@ background-color: transparent;
 
 ::ng-deep body:has(header.open) {
   overflow: hidden;
+}
+
+.black-text .login-btn {
+  background-color: #1C1C1C;
+  color: #FDCC06;
 }
 
 @media only screen and (max-width: 1180px) {

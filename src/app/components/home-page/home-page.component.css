@@ -208,7 +208,7 @@
 
 .custom-card-block {
   display: flex;
-  gap: 32px;
+  gap: 8px;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 40px;
@@ -234,7 +234,7 @@
 }
 
 .custom-card-header {
-  max-width: 519px;
+  max-width: 608px;
   width: 100%;
   border-radius: 16px;
   background: #efefef;

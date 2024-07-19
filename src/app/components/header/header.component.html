@@ -1,8 +1,12 @@
-<header [class.open]="mobileMenuOpened()">
+<header [class.open]="mobileMenuOpened()" [class.black-text]="useBlackText()">
   <div class="wrapper">
-    <a routerLink="/" class="logo"
-      ><img src="assets/images/logo.svg " alt="MyGuava Transfers logo"
-    /></a>
+    <a routerLink="/" class="logo">
+      @if (useBlackText()) {
+        <img src="assets/icons/logo-black.svg " alt="MyGuava Transfers logo" />
+      } @else {
+        <img src="assets/images/logo.svg " alt="MyGuava Transfers logo" />
+      }
+    </a>
     <nav class="header-nav">
       <ul class="menu">
         <li>
@@ -32,7 +36,7 @@
         class="button business-btn"
       >
         Go to business
-        <img width="16" src="assets/icons/arrow-right.png" />
+        <img class="white-arrow" width="16" src="assets/icons/arrow-right.png" />
       </a>
       } @else{
       <a
@@ -41,7 +45,11 @@
         class="button business-btn"
       >
         Go to individual
-        <img width="16" src="assets/icons/arrow-right.png" />
+        @if (useBlackText()) {
+          <img class="black-arrow" width="16" src="assets/icons/arrow-right-black.svg" />
+        } @else {
+          <img class="white-arrow" width="16" src="assets/icons/arrow-right.png" />
+        }
       </a>
 
       }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, input, signal } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 
 @Component({
@@ -11,6 +11,8 @@ import { NavigationEnd, Router, RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
   private router = inject(Router);
+
+  useBlackText = input(false);
 
   mobileMenuOpened = signal(false);
   isOnBusiness = signal(false);

@@ -11,7 +11,7 @@
 }
 
 .bg-color.bussiness {
-  background: url('/assets/images/bussiness-back.png'), linear-gradient(180deg, #1C1B1B 44.42%, #3A3A3A 100%);;
+  background: url('/assets/images/bussiness-back.png'), linear-gradient(90deg, #d6b600 34.28%, #c5a700 93.27%);;
   background-size: contain;
   background-blend-mode: luminosity;
   height: 585px;

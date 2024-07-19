@@ -24,7 +24,7 @@ export class ContactFormComponent {
   phone = '';
   message = '';
   company = '';
-  country = this.countries[0];
+  country = 'United Kingdom';
   sendDisabled = signal(false);
 
   onSend(): void {

@@ -25,21 +25,21 @@ export class AgentsListComponent {
       workHours: 'Mon-Fri, 10 AM - 5 PM'
     },
     {
-      name: 'Name',
+      name: 'Agent Name',
       address: 'Clarendon ave. 78',
       phone: '+1 755 1002 678',
       email: 'h.kojima@gmail.com',
       workHours: 'Mon-Fri, 10 AM - 5 PM'
     },
     {
-      name: 'Alina',
+      name: 'Agent Name',
       address: 'Clarendon ave. 78',
       phone: '+1 755 1002 678',
       email: 'h.kojima@gmail.com',
       workHours: 'Mon-Fri, 10 AM - 5 PM'
     },
     {
-      name: 'Hanim',
+      name: 'Agent Name',
       address: 'Clarendon ave. 78',
       phone: '+1 755 1002 678',
       email: 'h.kojima@gmail.com',

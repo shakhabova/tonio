@@ -26,7 +26,7 @@ export class AppComponent implements AfterViewInit {
   private route = inject(ActivatedRoute);
   title = 'tonio';
   displayGlobe = signal(false);
-  urlsWithGlobe = [ 'contact-us',  'find-location', 'help', 'blog'];
+  urlsWithGlobe = [ 'contact-us',  'find-location', 'help', 'blog', 'see-locations'];
   isBussinessPage = signal(this.checkIsBussinessPage);
   forIframe = signal(false);
 
@@ -68,6 +68,6 @@ export class AppComponent implements AfterViewInit {
   }
 
   private get checkIsBussinessPage(): boolean {
-    return ['go-to-business', 'see-locations'].some(location => this.router.isActive(location, { queryParams: 'ignored', fragment: 'ignored', matrixParams: 'ignored', paths: 'exact' }))
+    return ['go-to-business'].some(location => this.router.isActive(location, { queryParams: 'ignored', fragment: 'ignored', matrixParams: 'ignored', paths: 'exact' }))
   }
 }
