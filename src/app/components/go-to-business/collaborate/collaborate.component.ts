@@ -27,7 +27,7 @@ export class CollaborateComponent {
     },
     {
       title: 'Beneficial fees',
-      subtitle: 'Generate revenue on a commissions earned from every transaction and increased business traffic',
+      subtitle: 'Generate revenue on a commissions earned from transactions and increased business traffic',
       imgSrc: 'assets/images/Loyalty.webp',
     },
     {

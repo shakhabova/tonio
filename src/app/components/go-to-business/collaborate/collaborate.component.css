@@ -30,6 +30,9 @@ font-style: normal;
 font-weight: 700;
 line-height: 33px; /* 150% */
 }
+.costum-card-subtitle {
+  font-size: 18px;
+}
 
 .benefir-wrapper {
   display: flex;
