@@ -1,0 +1,11 @@
+<nav>
+  <ul [class] = "small? 'pagination pagination-sm' : 'pagination'">
+    <li
+    [class]="currentPage === 1 ? 'page-item disabled' : 'page-item'"
+    @if(firstLastButtons)>
+  </li>
+  <button class="page-link" (click)= "selectPageNumber(1)">««</button>
+  <li [class]="currentPage === 1 ? 'page-item disabled' : 'page-item'"  @if(nextPreviousButtons)"></li>
+    
+  </ul>
+</nav>
