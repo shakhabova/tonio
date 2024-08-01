@@ -125,6 +125,13 @@ h1 {
   color: #5D6677;
 }
 
+.paginator-wrapper {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 1440px) {
   .cards-block {
     grid-template-columns: repeat(3, 330px);

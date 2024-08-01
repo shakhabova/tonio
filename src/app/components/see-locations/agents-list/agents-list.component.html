@@ -7,7 +7,7 @@
   </div>
 
   <div class="cards-block">
-    @for (agent of filteredAgents(); track agent.name) {
+    @for (agent of displayAgents(); track agent.name) {
       <div class="agents-card">
         <div class="agents-card-title">{{ agent.name }}</div>
         <div class="card-info-block">
@@ -54,4 +54,14 @@
       </div>
     }
   </div>
+
+  @if(filteredAgents().length > pageSize) {
+    <div class="paginator-wrapper">
+      <app-pagination 
+        [collectionSize]="filteredAgents().length" 
+        [pageSize]="pageSize"
+        [(currentPage)]="currentPage"
+      ></app-pagination>
+    </div>
+  }
 </section>

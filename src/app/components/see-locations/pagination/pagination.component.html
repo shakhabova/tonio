@@ -1,11 +1,42 @@
 <nav>
-  <ul [class] = "small? 'pagination pagination-sm' : 'pagination'">
+  <ul [class]="small() ? 'pagination pagination-sm' : 'pagination'">
+    @if(firstLastButtons()){
+    <li [class]="currentPage() === 1 ? 'page-item disabled' : 'page-item'">
+      <button class="page-link" (click)="selectPageNumber(1)">««</button>
+    </li>
+    }
     <li
-    [class]="currentPage === 1 ? 'page-item disabled' : 'page-item'"
-    @if(firstLastButtons)>
-  </li>
-  <button class="page-link" (click)= "selectPageNumber(1)">««</button>
-  <li [class]="currentPage === 1 ? 'page-item disabled' : 'page-item'"  @if(nextPreviousButtons)"></li>
-    
+      [class]="currentPage() === 1 ? 'page-item disabled' : 'page-item'"
+    >
+      <button class="page-link" (click)="previous()">«</button>
+    </li>
+    @for(p of totalPages; track p; let i = $index) {
+      @if(i + 1 >= currentPage() - maxSize() && i + 1 <= currentPage() +
+      maxSize()){
+      <li [class]="currentPage() === i + 1 ? 'page-item active' : 'page-item'">
+        <button class="page-link" (click)="selectPageNumber(i + 1)">
+          {{ i + 1 }}
+        </button>
+      </li>
+      }
+    } @if(nextPreviousButtons()){
+    <li
+      [class]="
+        currentPage() === totalPages.length ? 'page-item disabled' : 'page-item'
+      "
+    >
+      <button class="page-link" (click)="next()">»</button>
+    </li>
+    } @if (firstLastButtons()){
+    <li
+      [class]="
+        currentPage() === totalPages.length ? 'page-item disabled' : 'page-item'
+      "
+    >
+      <button class="page-link" (click)="selectPageNumber(totalPages.length)">
+        »»
+      </button>
+    </li>
+    }
   </ul>
 </nav>

@@ -2,9 +2,9 @@
   <div class="wrapper">
     <a routerLink="/" class="logo">
       @if (useBlackText()) {
-        <img src="assets/icons/logo-black.svg " alt="MyGuava Transfers logo" />
+      <img src="assets/icons/logo-black.svg " alt="MyGuava Transfers logo" />
       } @else {
-        <img src="assets/images/logo.svg " alt="MyGuava Transfers logo" />
+      <img src="assets/images/logo.svg " alt="MyGuava Transfers logo" />
       }
     </a>
     <nav class="header-nav">
@@ -14,7 +14,7 @@
             >Track a transfer</a
           >
         </li>
-        <li><a routerLink="/find-location" class="">Find a Location</a></li>
+        <!-- <li><a routerLink="/find-location" class="">Find a Location</a></li> -->
         <li><a routerLink="/help" routerLinkActive="active">Help</a></li>
         <li>
           <a routerLink="/contact-us" routerLinkActive="active" class=""
@@ -36,7 +36,11 @@
         class="button business-btn"
       >
         Go to business
-        <img class="white-arrow" width="16" src="assets/icons/arrow-right.png" />
+        <img
+          class="white-arrow"
+          width="16"
+          src="assets/icons/arrow-right.png"
+        />
       </a>
       } @else{
       <a
@@ -44,21 +48,35 @@
         routerLinkActive="router-link-active"
         class="button business-btn"
       >
-        Go to individual
-        @if (useBlackText()) {
-          <img class="black-arrow" width="16" src="assets/icons/arrow-right-black.svg" />
+        Go to individual @if (useBlackText()) {
+        <img
+          class="black-arrow"
+          width="16"
+          src="assets/icons/arrow-right-black.svg"
+        />
         } @else {
-          <img class="white-arrow" width="16" src="assets/icons/arrow-right.png" />
+        <img
+          class="white-arrow"
+          width="16"
+          src="assets/icons/arrow-right.png"
+        />
         }
       </a>
 
-      }
+      } @if (!isOnBusiness()){
       <a
         href="https://account.tonio.world/home"
         target="_blank"
         class="button login-btn"
         >Sign in/Sign up</a
+      >}@else {
+      <a
+        href="https://agent.tonio.world/auth/login"
+        target="_blank"
+        class="button login-btn"
+        >Sign in/Sign up</a
       >
+      }
     </div>
     <div class="nav-btn" (click)="mobileMenuOpened.set(!mobileMenuOpened())">
       <div class="btn-bar menu-btn"></div>
@@ -220,34 +238,34 @@
             </span>
             <span class="mobile-menu-icon-text">Track a transfer</span>
           </a>
-          <a routerLink="/find-location" class="mobile-menu-icon-link">
+          <!-- <a routerLink="/find-location" class="mobile-menu-icon-link">
             <div class="mobile-menu-icon">
               <img src="assets/icons/find-icon.png" alt="map pin" />
             </div>
             <span class="mobile-menu-icon-text">Find location</span>
-          </a>
+          </a> -->
         </div>
         <div class="button-block">
           @if (!isOnBusiness()){
-            <a
-              routerLink="go-to-business"
-              routerLinkActive="router-link-active"
-              class="button mobile-go-to-business"
-            >
-              Go to business
-              <img width="16" src="assets/icons/arrow-right.png" />
-            </a>
-            } @else{
-            <a
-              routerLink="/"
-              routerLinkActive="router-link-active"
-              class="button mobile-go-to-business"
-            >
-              Go to individual
-              <img width="16" src="assets/icons/arrow-right.png" />
-            </a>
-      
-            }
+          <a
+            routerLink="go-to-business"
+            routerLinkActive="router-link-active"
+            class="button mobile-go-to-business"
+          >
+            Go to business
+            <img width="16" src="assets/icons/arrow-right.png" />
+          </a>
+          } @else{
+          <a
+            routerLink="/"
+            routerLinkActive="router-link-active"
+            class="button mobile-go-to-business"
+          >
+            Go to individual
+            <img width="16" src="assets/icons/arrow-right.png" />
+          </a>
+
+          }
           <a
             href="https://account.tonio.world/home"
             target="_blank"

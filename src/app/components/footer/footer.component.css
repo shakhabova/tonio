@@ -50,6 +50,7 @@ li {
   max-width: 235px;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 .footer-right-block .footer-icon-block {
   display: flex;
