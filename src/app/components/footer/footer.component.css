@@ -25,7 +25,8 @@ a {
   display: flex;
   justify-content: space-between;
   max-width: 600px;
-  width: 100%;
+    margin: 0 40px;
+    width: 100%;
 }
 li {
   list-style: none;
@@ -119,7 +120,7 @@ footer .copyright-top {
   align-items: flex-start;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 990px) {
   .container {
     flex-direction: column;
     gap: 40px;
@@ -127,10 +128,20 @@ footer .copyright-top {
 
   .footer-menu-block {
     max-width: unset;
+    margin: unset;
   }
 
   .footer-right-block {
-    align-self: center;
+    max-width: unset;
+    row-gap: 23px;
+  }
+
+  .footer-right-block img:first-child {
+    justify-self: end;
+  }
+
+  .copyright {
+    margin-top: 53px;
   }
 }
 
