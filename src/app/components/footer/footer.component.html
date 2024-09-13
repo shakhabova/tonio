@@ -5,25 +5,25 @@
         ><img src="assets/images/logo.svg " alt="logo MyGuava Transfers"
       /></a>
       @if (!isOnBusiness()){
-        <a
-          routerLink="go-to-business"
-          routerLinkActive="router-link-active"
-          class="button business-btn"
-        >
-          Go to business
-          <img width="16" src="assets/icons/arrow-right.svg" />
-        </a>
-        } @else{
-        <a
-          routerLink="/"
-          routerLinkActive="router-link-active"
-          class="button business-btn"
-        >
-          Go to individual
-          <img width="16" src="assets/icons/arrow-right.svg" />
-        </a>
-  
-        }
+      <a
+        routerLink="go-to-business"
+        routerLinkActive="router-link-active"
+        class="button business-btn"
+      >
+        Go to business
+        <img width="16" src="assets/icons/arrow-right.svg" />
+      </a>
+      } @else{
+      <a
+        routerLink="/"
+        routerLinkActive="router-link-active"
+        class="button business-btn"
+      >
+        Go to individual
+        <img width="16" src="assets/icons/arrow-right.svg" />
+      </a>
+
+      }
     </div>
     <div class="footer-menu-block">
       <ul class="footer-menu-list">
@@ -40,7 +40,9 @@
         </li>
 
         <li>
-          <a routerLink="/help/credit-card" routerLinkActive="router-link-active"
+          <a
+            routerLink="/help/credit-card"
+            routerLinkActive="router-link-active"
             >Credit/debit card</a
           >
         </li>
@@ -48,13 +50,18 @@
 
       <ul class="footer-menu-list">
         <li><a>Legal</a></li>
-        <li><a routerLink="/terms-and-conditions" routerLinkActive="router-link-active">Terms of Service</a></li>
+        <li>
+          <a
+            routerLink="/terms-and-conditions"
+            routerLinkActive="router-link-active"
+            >Terms of Service</a
+          >
+        </li>
         <li>
           <a routerLink="/privacy-policy" routerLinkActive="router-link-active"
             >Privacy policy</a
           >
         </li>
-       
       </ul>
 
       <ul class="footer-menu-list">
@@ -69,7 +76,11 @@
             >Contact us</a
           >
         </li>
-        <li><a routerLink="/blog" routerLinkActive="router-link-active">News/Blog</a></li>
+        <li>
+          <a routerLink="/blog" routerLinkActive="router-link-active"
+            >News/Blog</a
+          >
+        </li>
       </ul>
     </div>
     <div class="footer-right-block">
@@ -93,13 +104,24 @@
         </div>
         <span class="footer-icon-text">Find location</span>
       </a> -->
-
-      <img src="/assets/icons/apple-store-badge.svg" />
-      <img style="margin-left: 8px;" src="/assets/icons/google-store-badge.svg" />
-      <div style="grid-column: span 2;"> The website and apps were developed and operated by our partner Equnox Limited 
-        company number 15136664
-        registered office address<br>
-        International House, 100 Menzies Road, Hastings, United Kingdom, TN38 9BB </div>
+      <a
+        href="https://apps.apple.com/az/app/tonio-transfers/id6587574602"
+        target="_blank"
+        ><img src="/assets/icons/apple-store-badge.svg"
+      /></a>
+      <a
+        href="https://play.google.com/store/apps/details?id=com.world.tonio"
+        target="_blank"
+        ><img
+          style="margin-left: 8px"
+          src="/assets/icons/google-store-badge.svg"
+      /></a>
+      <div style="grid-column: span 2">
+        The website and apps were developed and operated by our partner Equnox
+        Limited company number 15136664 registered office address<br />
+        International House, 100 Menzies Road, Hastings, United Kingdom, TN38
+        9BB
+      </div>
     </div>
   </div>
   <div class="copyright">
@@ -135,10 +157,11 @@
     </div>
 
     <p class="container copyright-text">
-      Tonio Limited registered by Company number 05103590, 
-      registered with Financial Conduct Authority as a Authorised Payment Institution with reference number 572541<br>
-      8 New Street, Leicester, United Kingdom, LE1 5NR<br>
-      <br>
+      Tonio Limited registered by Company number 05103590, registered with
+      Financial Conduct Authority as a Authorised Payment Institution with
+      reference number 572541<br />
+      8 New Street, Leicester, United Kingdom, LE1 5NR<br />
+      <br />
       <a href="mailto:info&#64;tonio.world"> info&#64;tonio.world</a>
     </p>
   </div>
