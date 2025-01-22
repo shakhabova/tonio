@@ -11,6 +11,7 @@ import { PrivacyPolicyComponent } from '../privacy-policy/privacy-policy.compone
   styleUrl: './footer.component.css',
 })
 export class FooterComponent {
+  currentYear = new Date().getFullYear();
   router = inject(Router);
   isOnBusiness = signal(false);
   ngOnInit() {
