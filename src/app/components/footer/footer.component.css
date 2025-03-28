@@ -134,6 +134,7 @@ footer .copyright-top {
   .footer-right-block {
     max-width: unset;
     row-gap: 23px;
+    justify-items: center;
   }
 
   .footer-right-block img:first-child {
