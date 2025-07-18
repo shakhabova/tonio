@@ -36,8 +36,8 @@ export class CollaborateComponent {
       imgSrc: 'assets/images/structure.webp',
     },
     {
-      title: 'Agent loyalty program',
-      subtitle: 'Get additional benefits from your referal to other agents',
+      title: 'Business loyalty program',
+      subtitle: 'Get additional benefits from your referal to other businesses',
       imgSrc: 'assets/images/Onboarding.webp',
     },
     {
